@@ -115,10 +115,12 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.debug",
     "django.core.context_processors.i18n",
     "django.core.context_processors.media",
+    "django.core.context_processors.request",	
     "geonode.maps.context_processors.resource_urls",
 )
 
 MIDDLEWARE_CLASSES = (
+    'django.middleware.gzip.GZipMiddleware',
     'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.cache.FetchFromCacheMiddleware',
@@ -228,6 +230,10 @@ INSTALLED_APPS = (
     'registration',
     'profiles',
     'avatar',
+    'agon_ratings',
+    'dialogos',
+    'taggit',
+    'relationships',
     'geonode.core',
     'geonode.maps',
     'geonode.proxy',
@@ -259,6 +265,16 @@ DB_DATASTORE_PASSWORD = ''
 DB_DATASTORE_HOST = ''
 DB_DATASTORE_PORT = ''
 DB_DATASTORE_TYPE=''
+
+# Agon Ratings
+AGON_RATINGS_CATEGORY_CHOICES = {
+    "maps.Map": {
+        "map": "How do you rate this map?"
+    },
+    "maps.Layer": {
+        "layer": "How do you rate this layer?"
+    },
+}
 
 try:
     from local_settings import *
