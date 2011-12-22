@@ -10,7 +10,7 @@ GEONODE_ROOT = os.path.dirname(geonode.__file__)
 _ = lambda x: x
 
 DEBUG = True
-SITENAME = "MapStory"
+SITENAME = "Mozambique"
 SITEURL = "http://localhost:8000/"
 TEMPLATE_DEBUG = DEBUG
 
@@ -134,7 +134,7 @@ LOCALE_PATHS = (
     os.path.join(PROJECT_ROOT, "maps", "locale"),
 )
 
-ROOT_URLCONF = 'mapstory.urls'
+ROOT_URLCONF = 'momzambique.urls'
 
 # Note that Django automatically includes the "templates" dir in all the
 # INSTALLED_APPS, se there is no need to add maps/templates or admin/templates
