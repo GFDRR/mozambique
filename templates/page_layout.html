@@ -5,6 +5,7 @@
   <title>{% block title %} {{ SITENAME }} {% endblock %}</title>
   <link rel="shortcut icon" href="{{ STATIC_URL }}theme/img/favicon.ico"/>
   {% block head %}
+  <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
   <script type="text/javascript" src="{% url django.views.i18n.javascript_catalog %}"></script>
   <script type="text/javascript" src="{% url lang %}"></script>
   {% endblock %}
