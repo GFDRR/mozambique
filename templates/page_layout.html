@@ -6,32 +6,76 @@
   <link rel="shortcut icon" href="{{ STATIC_URL }}theme/img/favicon.ico"/>
   {% block head %}
   <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
-  <script type="text/javascript" src="{% url django.views.i18n.javascript_catalog %}"></script>
-  <script type="text/javascript" src="{% url lang %}"></script>
+ <style>
+   select#langval{
+     width: 100px;
+   }
+   .topbar{
+     clear: both;
+   }
+   #main{
+     clear: both;
+   }
+
+     /* Override some defaults */
+      html, body {
+        background-color: #eee;
+      }
+      body {
+        padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
+      }
+      .container > footer p {
+        text-align: center; /* center align it with the container */
+      }
+
+      /* The white background content wrapper */
+      .content {
+      }
+
+      /* Page header tweaks */
+      .page-header {
+        background-color: #f5f5f5;
+        padding: 20px 20px 10px;
+        margin: -20px -20px 20px;
+      }
+
+  </style>
   {% endblock %}
 </head>
 <body>
-  <div id="header">
-    <div class="wrap selfclear">
-      <a id="logo" href="{% url geonode.views.index %}">GeoNode</a>
-      <div id="login-area">
+
+<!-- TOP -->
+<div class="topbar" >
+  <div class="topbar-inner">
+    <div class="container-fluid">
+      <a class="brand" href="{% url geonode.views.index %}">Mozambique Adaptation</a>
+      <ul class="nav">
+        <li class="active"><a href="#overview">Overview</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#adaptation">Adaptation</a></li>
+        <li><a href="{% url search %}">{% trans "Data" %}</a></li>
+        <li><a href="{% url geonode.maps.views.maps %}">{% trans "Maps" %}</a></li>
+        {% if user.is_staff %}
+        <li><a href="/admin/">{% trans "Admin" %}</a></li>
+        {% endif %}
+
+
         {% if user.is_authenticated %}
-          <a href="{% if user.get_profile %}{{ user.get_profile.get_absolute_url }}{% else %}{% url profiles_create_profile %}{% endif %}">{{ user.username}}</a> (<a href="{% url auth_password_change %}">{% trans "Change password" %}</a> | <a href="{% url auth_logout %}">{% trans "Log out" %}</a>)
-        {% else %}
-          <!-- this should be updated to a url var --><a href="/accounts/login">{% trans "Sign in" %}</a>
-          {% if REGISTRATION_OPEN %} or <a href="{% url registration_register %}">{% trans "Register" %}</a>{% endif %}
-          {% trans "for extra features" %}
-      {% endif %}
-      </div>
-    </div><!-- /.wrap -->
-  </div><!-- /#header -->
-  <div id="crossbar">
-    <div class="wrap selfclear">             
-      {% block nav %}
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">{{ user.first_name }} {{ user.last_name }}</a>
+          <ul class="dropdown-menu">
+            <li><a href="{% if user.get_profile %}{{ user.get_profile.get_absolute_url }}{% else %}{% url profiles_create_profile %}{% endif %}">Edit profile</a></li>
+            <li><a href="{% url auth_password_change %}">( {% trans "Change password" %}</a></li>
+            <li><a href="{% url auth_logout %}">{% trans "Log out" %} )</a></li>
+          </ul>
+        <li>
+        {% endif %}
+
+     </ul>
+ 
    {% get_current_language as LANGUAGE %}
-    <form class="langbar" id="target" action="/i18n/setlang/" method="post">
+    <form class="pull-right" id="target" action="/i18n/setlang/" method="post">
       {% csrf_token %}
-       <div style="display: inline;">
          <select id="langval" name="language" onchange="javascript:form.submit()">
            {% for lang in LANGUAGES %}
             <option value="{{ lang.0 }}"
@@ -40,43 +84,51 @@
             </option>
            {% endfor %}
          </select>
-       </div>
      </form>
 
-    <ul id="sitenav" class="selfclear">
-        <li class="home"><a href="{% url geonode.views.index %}">{% trans "Home" %}</a></li> 
-        <li class=""><a class="" id="dataLink" href="{% url geonode.maps.views.browse_data %}">{% trans "Data" %}</a></li>
-        <li class=""><a class="" id="mapsLink" href="{% url geonode.maps.views.maps %}">{% trans "Maps" %}</a></li>
-    {% if user.is_authenticated %}
-        <li class=""><a class="" id="profileLink" href="{% url profiles_profile_detail user.username %}">{% trans "Profile" %}</a></li>
-    {% if user.is_staff %}
-        <li class=""><a class="" id="adminLink" href="/admin/">{% trans "Admin" %}</a></li>
-    {% endif %}
+        {% if not user.is_authenticated %}
+        <form action="/accounts/login/" method="post" accept-charset="utf-8" class="pull-right span6">
+             <input class="input-small" type="text" name="username" placeholder="Username">
+             <input class="input-small" type="password" name="password" placeholder="Password">
+             {% csrf_token %}
+             <button class="btn" type="submit">Sign in</button>
+        </form>
+        {% endif %}
+  
+    </div>
+  </div>
+</div>
+<!-- END TOP -->
 
-    {% endif %}
-    </ul>
-      {% endblock %}
-
-    </div><!-- /.wrap -->
-  </div><!-- /#crossbar -->
-  <div id="main">
-    <div class="wrap selfclear">       
-      {% block main %}{% endblock %}
-      {% block content %}{% endblock %}
+<!-- MAIN -->
+{% block main %}
+<div id="main" class="container-fluid">
+<div class="sidebar">
       {% block sidebar %}{% endblock %}
-    </div><!-- /.wrap -->
-  </div><!-- /#main -->
-  <div id="footer">
-    <div class="wrap selfclear">             
-      {% block footer %}
-      <div class="onecol">
-        Powered by <a href="http://geonode.org">{% trans "GeoNode" %}</a>
-        | <strong>{% trans "Need Help?" %}</strong>
-        <a href="{% url geonode.views.static "help" %}">{% trans "Help" %}</a> 
-        | <a href="{% url geonode.views.developer %}">{% trans "For Developers" %}</a>
-      </div>
-      {% endblock %}
-    </div><!-- /.wrap -->
-  </div><!-- /#footer -->
+ </div>
+ <div class="content">
+      {% block content %}{% endblock %}
+ </div>
+</div>
+{% endblock %}
+<!-- END MAIN -->
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+  {% block footer %}
+  <p class="pull-right">
+</p>
+  {% endblock %}
+ 
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+<!-- Le javascript -->
+<script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+<script src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-dropdown.js"></script>
+<script type="text/javascript" src="{% url django.views.i18n.javascript_catalog %}"></script>
+<script type="text/javascript" src="{% url lang %}"></script>
 </body>
 </html>

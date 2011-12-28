@@ -10,7 +10,7 @@ GEONODE_ROOT = os.path.dirname(geonode.__file__)
 _ = lambda x: x
 
 DEBUG = True
-SITENAME = "Mozambique"
+SITENAME = "Mozambique Adaptation"
 SITEURL = "http://localhost:8000/"
 TEMPLATE_DEBUG = DEBUG
 
@@ -119,9 +119,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 MIDDLEWARE_CLASSES = (
-    'django.middleware.cache.UpdateCacheMiddleware',
+#    'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.cache.FetchFromCacheMiddleware',
+#    'django.middleware.cache.FetchFromCacheMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
