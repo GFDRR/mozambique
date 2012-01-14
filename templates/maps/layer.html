@@ -1,4 +1,4 @@
-{% extends "page_layout.html" %}
+{% extends "maps/data_base.html" %}
 {% load geonode_auth %}
 {% load i18n %}
 
@@ -14,13 +14,28 @@
 
 {{ block.super }}
 <style>
-table {
-  width: 80%;
-  margin-bottom: 0px;
+#preview_map { 
+  width: 100%;
+  margin: auto;
+  border-bottom: #404040 solid 5px;
+  border-top: #404040 solid 5px;
 }
-table th, table td {
-  padding: 0px;
+
+.downloadbtn {
+margin-top: 5px;
 }
+#description{
+padding-top:10px;
+padding-bottom:10px;
+}
+#information{
+padding-left: 50px;
+padding-top: 20px;
+}
+#information > table > tbody > tr > th{
+width: 100px;
+}
+
 </style>
     <script type="text/javascript">
 {% autoescape off %}
@@ -124,31 +139,35 @@ table th, table td {
 
 {% block content %}
 <div class="hero-unit" id="description"> <h1> {{ layer.resource.title|default:layer.typename }} </h1>
-<p> <strong>{% trans "Abstract" %}:</strong> {{ layer.abstract|default:_("No abstract for this layer.") }} </p>
+<p>{{ layer.abstract|default:_("No abstract for this layer.") }}</p>
 </div>
 <div id="preview_map"></div>
 
-<div class="well">
+<div class="well" id="information">
 <h2>Information</h2>
-{% if layer.display_type %}<p> <strong>{% trans "Type" %}:</strong> {{ layer.display_type }} </p>{% endif %}
-{% if layer.keywords %}<p> <strong>{% trans "Keywords" %}:</strong> {{ layer.keywords }}</p>{% endif %}
-{% if layer.edition %}<p> <strong>{% trans "Edition" %}:</strong> {{ layer.edition }}</p>{% endif %}
-{% if layer.topic_category %}<p> <strong>{% trans "Topic Category" %}:</strong> {{ layer.topic_category }}</p>{% endif %}
+  <table>
+  <tbody>
+{% if layer.display_type %}<tr><th>{% trans "Type" %}</th><td>{{ layer.display_type }}</td></tr>{% endif %}
+{% if layer.keywords %}<tr><th>{% trans "Keywords" %}</th><td>{{ layer.keywords }}</td></tr>{% endif %}
+{% if layer.edition %}<tr><th>{% trans "Edition" %}</th><td>{{ layer.edition }}</td></tr>{% endif %}
+{% if layer.topic_category %}<tr><th>{% trans "Topic Category" %}</th><td>{{ layer.topic_category }}</td></tr>{% endif %}
 
 {% if layer.constraints_use or layer.constraints_other %}
-<p> <strong>{% trans "Citation" %}:</strong> 
-    {{ layer.constraints_use}} {{ layer.contraints_other}}
-</p>
+<tr><th>{% trans "Citation" %}</th>
+<td>{{ layer.constraints_use}} {{ layer.contraints_other}}</td></tr>
 {% endif %}
 
+
 {% if layer.owner %}
-<p> <strong>{% trans "Owner" %}:</strong>
+<tr><th>{% trans "Owner" %}</th>
+<td>
     <a href="{{ layer.owner.get_profile.get_absolute_url }}"> {{ layer.owner.username }} </a>
-</p>
+</td></tr>
 {% endif %}
 
 {% if layer.poc %}
-<p> <strong>{% trans "Point of Contact" %}:</strong>
+<tr><th>{% trans "Point of Contact" %}</th>
+<td>
   {% if layer.poc.user %}
     <a href="{{ layer.poc.user.get_profile.get_absolute_url }}"> {{ layer.poc.user.username }} </a>
   {% else %}
@@ -165,53 +184,65 @@ table th, table td {
         {% if layer.poc.country %}<li><strong>{% trans "Country" %}:</strong> {{ layer.poc.country}}</li>{% endif %}
     </ul>
   {% endif %}
-</p>
+</td></tr>
 {% endif %}
 
+
 {% if layer.attribute_names %}
-<p> <strong>{% trans "Attributes" %}:</strong> 
-    {{ layer.attribute_names|join:", " }}
-</p>
+<tr><th>{% trans "Attributes" %}</th>
+<td>{{ layer.attribute_names|join:", " }}</td>
+</tr>
 {% endif %}
 
 {% if layer.supplemental_information %}
-<p> <strong>{% trans "Supplemental Information" %}:</strong> 
-    {{ layer.supplemental_information }}
-</p>
+<tr><th>{% trans "Supplemental Information" %}</th>
+<td>{{ layer.supplemental_information }}</td>
+</tr>
 {% endif %}
 
 {% if layer.data_quality_statement %}
-<p> <strong>{% trans "Data Quality Statement" %}:</strong> 
-    {{ layer.data_quality_statement }}
-</p>
+<tr><th>{% trans "Data Quality Statement" %}</th>
+<td>{{ layer.data_quality_statement }}</td>
+</tr>
 {% endif %}
 
-{% if layer.geographic_bounding_box %}<p> <strong>{% trans "Bounding Box" %}:</strong> {{ layer.geographic_bounding_box }} </p>{% endif %}
-{% if layer.metadata.crsOptions %}<p> <strong>{% trans "Native SRS" %}:</strong> {{ layer.metadata.crsOptions.0|default:_("No SRS specified.") }} </p>{% endif %}
-</div>
 
+{% if layer.geographic_bounding_box %}
+<tr><th>{% trans "Bounding Box" %}</th>
+<td>{{ layer.geographic_bounding_box }}</td>
+</tr>
+{% endif %}
+
+{% if layer.metadata.crsOptions %}
+<tr><th>{% trans "Native SRS" %}</th>
+<td>{{ layer.metadata.crsOptions.0|default:_("No SRS specified.") }}</td>
+</tr>
+{% endif %}
+</tbody>
+</table>
+</div>
 {% endblock %}
 
 {% block sidebar %}
 <div class="well">
-    <h3> {% trans "Download" %} </h3>
-    <p> <strong>{% trans "Data" %}: </strong>
-       <ul>
+    <h2> {% trans "Download" %} </h2>
+    <p>{% trans "Below are links to download the raw data and metadata for this layer. The most used download format is colored in blue." %}</p>
+    <h4>{% trans "Data" %}</h4>
+    <p>
         {% for extension, type, link in layer.download_links %}
-            <li><a class="btn {% if forloop.first %}primary{% endif %}" href="{{link}}">{{type}}</a></li>
+            <a class="downloadbtn btn {% if forloop.first %}primary{% endif %}" href="{{link}}">{{type}}</a>
         {% endfor %}
-       </ul>
     </p>
-    <p> <strong>{% trans "Metadata" %}: </strong>
-        <ul>
+    <h4>{% trans "Metadata" %}</h4>
+    <p>
         {% for mimetype, mdtype, link in layer.metadata_links %}
-            <li><a class="btn primary" href="{{link}}">{{mdtype}}</a></li>
+            <a class="downloadbtn btn primary" href="{{link}}">{{mdtype}}</a>
         {% empty %}
             <em> {% trans "No metadata links provided for this data." noop %} </em>
         {% endfor %}
-        </ul>
+        
     </p>
-    <h3>{% trans "Maps" %} </h3>
+    <h2>{% trans "Maps" %} </h2>
     {% if layer.maps %}
     <p>{% trans "The following maps use this data set" %}:
         <ul>
@@ -227,21 +258,21 @@ table th, table td {
     {% has_obj_perm user layer "maps.change_layer" as can_change %}
     {% has_obj_perm user layer "maps.delete_layer" as can_delete %}
 
-    <h3> {% trans "Styles" %} </h3>
-    <p> {% trans "The following styles are associated with this data set.  Choose a style to view it in the preview to the left.  Click on a style name to view or edit the style." %}
-    <br/>
-    <span class="styles-list">
+    <h2> {% trans "Styles" %} </h2>
+    <p> {% trans "The following styles are associated with this data set. Click on a style name to view or edit the style." %}</p>
+    <h4>{{ layer.default_style.name }} <span class="label">Default</span></h4>
         <input type="radio" name="style" id="{{layer.publishing.default_style.name}}" value="{{layer.publishing.default_style.name}}" checked="checked"/>
-        <label for="{{layer.publishing.default_style.name}}" class="style-title"> {{ layer.default_style.name|title }} </label>
-        <a href="{{ layer.default_style.body_href }}">SLD</a><br/>
+        <a class="btn style-title" href="#">Edit</a>
+        <a class="btn" target="_blank" href="{{ layer.default_style.body_href }}">Download SLD</a>
     {% for style in layer.styles %} 
+       <h4>{{ style.name }}</h4>
         <input type="radio" name="style" id="{{style.name}}" value="{{style.name}}"/>
-        <label for="{{style.name}}" class="style-title"> {{ style.name|title }} </label>
-        <a href="{{ style.body_href }}">SLD</a><br/>
+        <a class="btn style-title" href="#">Edit</a>
+        <a class="btn" target="_blank" href="{{ style.body_href }}">Download SLD</a>
     {% endfor %}
-    </span>
+   </p>
     {% if user.is_authenticated and can_change %}
-    {% trans "Default style:" %}
+    <h4>{% trans "Default style:" %}</h4>
     <select name="default-style">
         <option value="{{layer.publishing.default_style.name}}" selected="selected">
           {{layer.publishing.default_style.name|title}}

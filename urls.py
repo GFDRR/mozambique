@@ -24,6 +24,20 @@ urlpatterns = patterns('',
     (r'^(?:index/?)?$', 'geonode.views.index'),
     (r'^(?P<page>help)/?$', 'geonode.views.static'),
     (r'^developer/?$', 'geonode.views.developer'),
+    url(r'^adaptation$', 'django.views.generic.simple.direct_to_template',
+                   {'template': 'adaptation.html'}, name='adaptation'),
+    url(r'^about$', 'django.views.generic.simple.direct_to_template',
+                   {'template': 'about.html'}, name='about'),
+    url(r'^impact$', 'django.views.generic.simple.direct_to_template',
+                   {'template': 'impact.html'}, name='impact'),
+    url(r'^resources$', 'django.views.generic.simple.direct_to_template',
+                   {'template': 'resources.html'}, name='resources'),
+
+    url(r'^tools$', 'django.views.generic.simple.direct_to_template',
+                   {'template': 'tools.html'}, name='tools'),
+
+
+
     url(r'^lang\.js$', 'django.views.generic.simple.direct_to_template',
                {'template': 'lang.js', 'mimetype': 'text/javascript'}, 'lang'),
     (r'^maps/', include('geonode.maps.urls')),
