@@ -21,9 +21,11 @@ sitemaps = {
 urlpatterns = patterns('',
     # Example:
     # (r'^geonode/', include('geonode.foo.urls')),
-    (r'^(?:index/?)?$', 'geonode.views.index'),
+    url(r'^$', 'django.views.generic.simple.direct_to_template',
+                {'template': 'index.html'}, name='index' ),
     (r'^(?P<page>help)/?$', 'geonode.views.static'),
     (r'^developer/?$', 'geonode.views.developer'),
+    (r'^rosetta/', include('rosetta.urls')),
     url(r'^adaptation$', 'django.views.generic.simple.direct_to_template',
                    {'template': 'adaptation.html'}, name='adaptation'),
     url(r'^about$', 'django.views.generic.simple.direct_to_template',

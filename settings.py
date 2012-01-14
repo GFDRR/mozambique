@@ -231,7 +231,10 @@ INSTALLED_APPS = (
     'geonode.core',
     'geonode.maps',
     'geonode.proxy',
-    'geonode'
+    'geonode',
+    'flatblocks',
+    'rosetta',
+    'modeltranslation',
 )
 
 def get_user_url(u):
@@ -239,6 +242,7 @@ def get_user_url(u):
     s = Site.objects.get_current()
     return "http://" + s.domain + "/profiles/" + u.username
 
+MODELTRANSLATION_TRANSLATION_REGISTRY = "mozambique.translation"
 
 ABSOLUTE_URL_OVERRIDES = {
     'auth.user': get_user_url

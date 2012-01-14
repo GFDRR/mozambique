@@ -187,7 +187,7 @@ border-bottom: none;
 <div class="topbar">
   <div class="topbar-inner">
     <div class="container-fluid">
-      <a class="brand" href="{% url geonode.views.index %}">Mozambique Adaptation</a>
+      <a class="brand" href="{% url index %}">Mozambique Adaptation</a>
       <ul class="nav">
         <li><a id="nav-impact" href="{% url impact %}">Impact</a></li>
         <li><a id="nav-adaptation" href="{% url adaptation %}">Adaptation</a></li>
@@ -217,7 +217,9 @@ border-bottom: none;
           <a href="#" class="dropdown-toggle">{{ user.first_name }} {{ user.last_name }}</a>
           <ul class="dropdown-menu">
             {% if user.is_staff %}
-            <li><a href="/admin/">{% trans "Admin" %}</a></li>
+            <li><a href="/data/upload">{% trans "Upload data" %}</a></li>
+            <li><a href="/rosetta/">{% trans "Translate site" %}</a></li>
+            <li><a href="/admin/">{% trans "Admin site" %}</a></li>
             {% endif %}
             <li><a href="{% if user.get_profile %}{{ user.get_profile.get_absolute_url }}{% else %}{% url profiles_create_profile %}{% endif %}">Edit profile</a></li>
             <li><a href="{% url auth_password_change %}">{% trans "Change password" %}</a></li>
