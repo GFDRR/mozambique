@@ -83,7 +83,8 @@ MEDIA_URL = '/uploaded/'
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATIC_URL = '/static/'
 GEONODE_UPLOAD_PATH = MEDIA_ROOT + 'geonode'
-GEONODE_CLIENT_LOCATION = STATIC_URL + 'static/'
+GEONODE_CLIENT_LOCATION = STATIC_URL + 'geonode/'
+GEONODE_CLIENT_LOCATION = 'http://localhost:8080/'
 ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
 STATICFILES_STORAGE = 'staticfiles.storage.StaticFilesStorage'
@@ -166,12 +167,12 @@ LOGIN_REDIRECT_URL = "/"
 DEFAULT_LAYERS_OWNER='admin'
 
 # Where should newly created maps be focused?
-DEFAULT_MAP_CENTER = (-84.7, 12.8)
+DEFAULT_MAP_CENTER = (35, -20)
 
 # How tightly zoomed should newly created maps be?
 # 0 = entire world;
 # maximum zoom is between 12 and 15 (for Google Maps, coverage varies by area)
-DEFAULT_MAP_ZOOM = 7
+DEFAULT_MAP_ZOOM = 5
 
 DEFAULT_LAYER_SOURCE = {
     "ptype":"gxp_wmscsource",
@@ -190,9 +191,23 @@ MAP_BASELAYERS = [{
     "source": { "ptype":"gx_olsource"},
     "type":"OpenLayers.Layer.OSM",
     "args":["OpenStreetMap"],
-    "visibility": True,
+    "visibility": False,
     "fixed": True,
     "group":"background"
+  },{
+    "source": { "ptype":"gxp_mapboxsource"},
+    "name":"bluemarble-topo-bathy-jan",
+    "group":"background"
+  },{
+    "source": { "ptype":"gxp_mapquestsource"},
+    "name":"osm",
+    "group":"background",
+    "visibility": True
+  },{
+    "source": {"ptype": "gxp_bingsource"},
+    "name": "Aerial",
+    "group": "background",
+    "visibility": False
   },{
     "source": {"ptype":"gx_olsource"},
     "type":"OpenLayers.Layer.WMS",
@@ -200,7 +215,7 @@ MAP_BASELAYERS = [{
     "visibility": False,
     "fixed": True,
     "args":[
-      "bluemarble",
+      "OpenGeo Bluemarble",
       "http://maps.opengeo.org/geowebcache/service/wms",
       {
         "layers":["bluemarble"],
@@ -232,6 +247,7 @@ INSTALLED_APPS = (
     'geonode.maps',
     'geonode.proxy',
     'geonode',
+#    'impact',
     'flatblocks',
     'rosetta',
     'modeltranslation',

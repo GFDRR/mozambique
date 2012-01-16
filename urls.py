@@ -3,6 +3,7 @@ from django.conf import settings
 from staticfiles.urls import staticfiles_urlpatterns
 from geonode.sitemap import LayerSitemap, MapSitemap
 from geonode.proxy.urls import urlpatterns as proxy_urlpatterns
+from geonode.maps.models import Map
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -17,6 +18,8 @@ sitemaps = {
     "layer": LayerSitemap,
     "map": MapSitemap
 }
+
+maps_queryset = Map.objects.all().order_by('-id')[:5]
 
 urlpatterns = patterns('',
     # Example:
@@ -35,11 +38,11 @@ urlpatterns = patterns('',
     url(r'^resources$', 'django.views.generic.simple.direct_to_template',
                    {'template': 'resources.html'}, name='resources'),
 
-    url(r'^tools$', 'django.views.generic.simple.direct_to_template',
-                   {'template': 'tools.html'}, name='tools'),
+    url(r'^tools$', 'django.views.generic.list_detail.object_list',
+                   {'queryset': maps_queryset, 'template_name': 'tools.html'},
+                   name='tools'),
 
-
-
+#    url('^riab/', include('impact.urls')),
     url(r'^lang\.js$', 'django.views.generic.simple.direct_to_template',
                {'template': 'lang.js', 'mimetype': 'text/javascript'}, 'lang'),
     (r'^maps/', include('geonode.maps.urls')),
@@ -75,5 +78,9 @@ if settings.SERVE_MEDIA:
     urlpatterns += [url(r'^static/thumbs/(?P<path>.*)$','django.views.static.serve',{
         'document_root' : settings.STATIC_ROOT + "/thumbs"
     })]
+    urlpatterns += [url(r'^uploaded/(?P<path>.*)$','django.views.static.serve',{
+        'document_root' : settings.MEDIA_ROOT
+    })]
+ 
     urlpatterns += staticfiles_urlpatterns()
     

@@ -1,10 +1,43 @@
 {% extends "maps/tools_base.html" %}
+{% block super%}
+{%endblock%}
+{% block sidebar %}
+<div class="well">
+<h2>Latest Maps</h2>
+<ol>
+{% for object in object_list %}
+<li>
+<h4>{{ object.title }}</h4>
+<p>{{ object.abstract }}</p>
+    <a href="#">
+      <img class="thumbnail" src="http://placehold.it/210x150" alt="">
+    </a>
+</li>
+{% empty %}
+<p>No maps have been created. Why not <a href="/maps/new">create one?</a>.</p>
+{% endfor %}
+</ol>
+<h2>Create your own</h2>
+<p>You can use the interactive tools to create your own map focused on a topic or a location.
+<button class="btn large primary" href="/maps/new">New map</button></p>
 
-{% block main %}
+</div>
+{% endblock %}
+{% block content %}
 <div id="main" class="container">
   <div class="well">
     <h1>Tools and Maps</h1>
-    
   </div>
+ <div id="grid" class="well">
+<ul class="media-grid">
+<li>
+
+<a href="#"><img class="thumbnail" src="http://placehold.it/330x230" alt=""></a>
+  </li>
+  <li>
+    <a href="#"><img class="thumbnail" src="http://placehold.it/330x230" alt=""></a>
+  </li>
+</ul>
+</div>
 </div>
 {% endblock %}
