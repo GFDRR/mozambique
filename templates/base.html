@@ -207,7 +207,7 @@ border-bottom: none;
 
         <li><a id="nav-about" href="{% url about %}">About</a></li>
      </ul>
- 
+ {% if csrf_token %}
    {% get_current_language as LANGUAGE %}
     <form class="pull-right" id="target" action="/i18n/setlang/" method="post">
       {% csrf_token %}
@@ -220,7 +220,7 @@ border-bottom: none;
            {% endfor %}
          </select>
      </form>
-
+  {% endif %}
         {% if user.is_authenticated %}
   <ul class="pull-right" id="account-menu">
         <li class="dropdown" data-dropdown="dropdown">
@@ -239,7 +239,7 @@ border-bottom: none;
       </ul>
         {% endif %}
 
-
+      {% if csrf_token %}
         {% if not user.is_authenticated %}
         <form id="login-form" action="/accounts/login/" method="post" accept-charset="utf-8" class="pull-right span6">
              <input class="input-small" type="text" name="username" placeholder="Username">
@@ -248,7 +248,7 @@ border-bottom: none;
              <button class="btn" type="submit">Sign in</button>
         </form>
         {% endif %}
-  
+      {% endif %}
     </div>
   </div>
 </div>
