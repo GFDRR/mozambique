@@ -1,4 +1,5 @@
 django-flatblocks
 django-rosetta
 django-modeltranslation
--e git+git@github.com:AIFDR/riab.git#egg=riab
+django-staticfiles==1.0.1
+-e git+git://github.com/AIFDR/riab.git#egg=riab
