@@ -1,5 +1,15 @@
 {% extends "maps/tools_base.html" %}
-{% block super%}
+
+{% block head %}
+{{ block.super }}
+<style>
+#droughtmap p, #droughtmap h4, #droughtmap iframe{
+   margin-left: 20px;
+}
+iframe {
+   border: 5px #404040 solid;
+}
+</style>
 {%endblock%}
 {% block sidebar %}
 <div class="well">
@@ -19,7 +29,7 @@
 </ol>
 <h2>Create your own</h2>
 <p>You can use the interactive tools to create your own map focused on a topic or a location.
-<button class="btn large primary" href="/maps/new">New map</button></p>
+<a class="btn large primary" href="/maps/new">New map</a></p>
 
 </div>
 {% endblock %}
@@ -29,15 +39,20 @@
     <h1>Tools and Maps</h1>
   </div>
  <div id="grid" class="well">
-<ul class="media-grid">
-<li>
-
-<a href="#"><img class="thumbnail" src="http://placehold.it/330x230" alt=""></a>
-  </li>
-  <li>
+  <ul class="media-grid">
+   <li>
     <a href="#"><img class="thumbnail" src="http://placehold.it/330x230" alt=""></a>
-  </li>
-</ul>
-</div>
+   </li>
+   <li>
+    <a href="#"><img class="thumbnail" src="http://placehold.it/330x230" alt=""></a>
+   </li>
+   <li id="droughtmap">
+     <iframe src='http://a.tiles.mapbox.com/v2/worldbank-climate.drought,worldbank-climate.wbc-borders/mm/tooltips,bwdetect,zoombox,attribution.html#5/-18/35' frameborder='0' width='330' height='230'></iframe>
+   <h4>Exposure to Drought - UNEP/GRID</h4>
+     <p>Number of people exposed to drought per year.</p>
+   </li>
+
+  </ul>
+ </div>
 </div>
 {% endblock %}

@@ -4,6 +4,7 @@
 {% block title %} {% trans "Map Viewer" %} - {{ block.super }} {% endblock %}
 
 {% block head %}
+{{ block.super }}
 {% include "geonode/ext_header.html" %}
 {% include "geonode/app_header.html" %}
 {% include "geonode/geo_header.html" %}
@@ -14,7 +15,6 @@
 <script type="text/javascript" src="{% url django.views.i18n.javascript_catalog %}"></script>
 <script type="text/javascript" src="{% url lang %}"></script>
 
-{{ block.super }}
 <script type="text/javascript">
 var app = new GeoExplorer();
 </script>

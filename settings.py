@@ -247,7 +247,7 @@ INSTALLED_APPS = (
     'geonode.maps',
     'geonode.proxy',
     'geonode',
-#    'impact',
+    'impact',
     'flatblocks',
     'rosetta',
     'modeltranslation',

@@ -6,7 +6,7 @@
   <title>{% block title %} {{ SITENAME }} {% endblock %}</title>
   <link rel="shortcut icon" href="{{ STATIC_URL }}theme/img/favicon.ico"/>
   {% block head %}
-  <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}theme/bootstrap.css">
   
  <style>
     .container-fluid > .sidebar {
@@ -199,7 +199,7 @@ border-bottom: none;
     <div class="container-fluid">
       <a class="brand" href="{% url index %}">Mozambique Adaptation</a>
       <ul class="nav">
-        <li><a id="nav-impact" href="{% url impact %}">Impact</a></li>
+        <li><a id="nav-vulnerability" href="{% url vulnerability %}">Vulnerability</a></li>
         <li><a id="nav-adaptation" href="{% url adaptation %}">Adaptation</a></li>
         <li><a id="nav-resources" href="{% url resources %}">Resources</a></li>
         <li><a id="nav-data" href="{% url search %}">{% trans "Data" %}</a></li>
@@ -280,11 +280,10 @@ border-bottom: none;
 <!-- END FOOTER -->
 
 <!-- Le javascript -->
-<script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
-<script src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-dropdown.js"></script>
+<script src="{{ STATIC_URL }}script/jquery-1.5.2.min.js"></script>
+<script src="{{ STATIC_URL }}script/bootstrap-dropdown.js"></script>
 <script type="text/javascript" src="{% url django.views.i18n.javascript_catalog %}"></script>
 <script type="text/javascript" src="{% url lang %}"></script>
-<script href="http://twitter.github.com/bootstrap/1.4.0/bootstrap-dropdown.js"></script>
 <script>
    // Enable the dropdown
    $('#topbar').dropdown();
