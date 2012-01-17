@@ -207,7 +207,7 @@ border-bottom: none;
 
         <li><a id="nav-about" href="{% url about %}">About</a></li>
      </ul>
- {% if csrf_token %}
+ {% if csrf_token != "NOTPROVIDED"  %}
    {% get_current_language as LANGUAGE %}
     <form class="pull-right" id="target" action="/i18n/setlang/" method="post">
       {% csrf_token %}
@@ -239,7 +239,7 @@ border-bottom: none;
       </ul>
         {% endif %}
 
-      {% if csrf_token %}
+      {% if csrf_token != "NOTPROVIDED"  %}
         {% if not user.is_authenticated %}
         <form id="login-form" action="/accounts/login/" method="post" accept-charset="utf-8" class="pull-right span6">
              <input class="input-small" type="text" name="username" placeholder="Username">
