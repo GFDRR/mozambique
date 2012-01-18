@@ -12,18 +12,16 @@
   <h2> {% trans "Editing details for " %} {{ layer.typename }} </h2>
   <form action="/data/{{layer.typename}}?describe" method="POST">
 	  {% csrf_token %}
-      <ul class="form">
-	      {{ layer_form.as_ul }}
+	      {{ layer_form.as_p }}
           <fieldset id="poc_form" {% if poc_form.hidden %}style="display:none"{% endif %}>
 	        <legend>Point of Contact</legend>
-            {{ poc_form.as_ul }}
+            {{ poc_form.as_p }}
           </fieldset>
           <fieldset id="metadata_form" {% if author_form.hidden %}style="display:none"{% endif %}>
 	        <legend>Metadata Provider</legend>
-            {{ author_form.as_ul }}
+            {{ author_form.as_p }}
           </fieldset>
-          <input type="submit" value="{% trans "Update" %}"/>
-      </ul>
+          <input class="btn large primary" style="margin: 20px 0 0 100px;" type="submit" value="{% trans "Update" %}"/>
   </form>
 </div>
 <script type="text/javascript">
