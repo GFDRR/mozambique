@@ -24,7 +24,7 @@ iframe {
     </a>
 </li>
 {% empty %}
-<p>{% trans "No maps have been created. Why not <a href="/maps/new">create one?</a>." %}</p>
+<p>{% trans "No maps have been created." %} {% trans "Why not" %}<a href="/maps/new">{% trans "create one?" %}</a>.</p>
 {% endfor %}
 </ol>
 <h2>{% trans "Create your own" %}</h2>
