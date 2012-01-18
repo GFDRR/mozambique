@@ -292,18 +292,17 @@ width: 100px;
     {% if can_change or can_delete or can_change_permissions %}
 
         <h3> {% trans "Manage" %} </h3>
-        <ul>
 			{% if user.is_authenticated %}
         {% if can_change %}
-                <li><a class="btn" href="?describe">{% trans "Edit metadata" %}</a></li>
-            	<li><a class="btn" href="?update">{% trans "Replace raw data" %}</a></li>
-            	<li><a class="btn" id="set_thumbnail" href="?thumbnail">{% trans "Generate thumbnail" %}</a></li>
+                <a class="btn primary" href="?describe">{% trans "Edit metadata" %}</a>
+            	<a class="btn" href="?update">{% trans "Replace raw data" %}</a>
+            	<a class="btn" id="set_thumbnail" href="?thumbnail">{% trans "Generate thumbnail" %}</a>
         {% endif %}
         {% if can_change_permissions %}
-        <li><a class="btn" href="{% url edit_layer_permissions layer.typename %}">{% trans "Edit Permissions" %}</a></li>
+        <a class="btn" href="{% url edit_layer_permissions layer.typename %}">{% trans "Edit Permissions" %}</a>
         {% endif %}
             {% if can_delete %}
-				<li><a class="btn" href="?remove">{% trans "Delete this layer" %}</a></li>
+				<a class="btn" href="?remove">{% trans "Delete this layer" %}</a>
 			{% endif %}
 			{% else %}
 				<li>Please authenticate to update or remove layers</li>
