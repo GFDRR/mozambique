@@ -165,9 +165,9 @@ width: 100px;
 
 
 {% if layer.owner %}
-<tr><th>{% trans "Owner" %}</th>
+<tr><th>{% trans "Uploaded by" %}</th>
 <td>
-    <a href="{{ layer.owner.get_profile.get_absolute_url }}"> {{ layer.owner.username }} </a>
+    <a href="{{ layer.owner.get_profile.get_absolute_url }}">{{ layer.owner.first_name }} {{ layer.owner.last_name }} ({{ layer.owner.username }})</a>
 </td></tr>
 {% endif %}
 
@@ -175,7 +175,7 @@ width: 100px;
 <tr><th>{% trans "Point of Contact" %}</th>
 <td>
   {% if layer.poc.user %}
-    <a href="{{ layer.poc.user.get_profile.get_absolute_url }}"> {{ layer.poc.user.username }} </a>
+    <a href="{{ layer.poc.user.get_profile.get_absolute_url }}">{{ layer.poc.name }} ({{ layer.poc.user.username }})</a> {{ layer.poc.organization }} {{ layer.poc.email }}
   {% else %}
     <ul>
         {% if layer.poc.name %}<li><strong>{% trans "Name" %}:</strong> {{ layer.poc.name}}</li>{% endif %}
