@@ -24,6 +24,12 @@
 .downloadbtn {
 margin-top: 5px;
 }
+
+.managebtn {
+margin-top: 5px;
+clear: both;
+}
+
 #description{
 padding-top:10px;
 padding-bottom:10px;
@@ -294,15 +300,15 @@ width: 100px;
         <h3> {% trans "Manage" %} </h3>
 			{% if user.is_authenticated %}
         {% if can_change %}
-                <a class="btn primary" href="?describe">{% trans "Edit metadata" %}</a>
-            	<a class="btn" href="?update">{% trans "Replace raw data" %}</a>
-            	<a class="btn" id="set_thumbnail" href="?thumbnail">{% trans "Generate thumbnail" %}</a>
+                <a class="btn managebtn primary" href="?describe">{% trans "Edit metadata" %}</a>
+            	<a class="btn managebtn" href="?update">{% trans "Replace raw data" %}</a>
+            	<a class="btn managebtn" id="set_thumbnail" href="?thumbnail">{% trans "Generate thumbnail" %}</a>
         {% endif %}
         {% if can_change_permissions %}
-        <a class="btn" href="{% url edit_layer_permissions layer.typename %}">{% trans "Edit Permissions" %}</a>
+        <a class="managebtn btn" href="{% url edit_layer_permissions layer.typename %}">{% trans "Edit Permissions" %}</a>
         {% endif %}
             {% if can_delete %}
-				<a class="btn" href="?remove">{% trans "Delete this layer" %}</a>
+				<a class="btn managebtn" href="?remove">{% trans "Delete this layer" %}</a>
 			{% endif %}
 			{% else %}
 				<li>Please authenticate to update or remove layers</li>
