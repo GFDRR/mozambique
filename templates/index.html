@@ -33,53 +33,53 @@
         <div class="container">
           <div class="row">
             <div class="span5 niceblock">
-               <h2>Impacts and Vulnerability</h2>
-               <p>Quickly explore climate projections, impacts and vulnerability information for your area</p>
-               <p><a class="btn pull-right" href="{% url vulnerability %}">Learn more &raquo;</a></p>
+               <h2>{% trans "Impacts and Vulnerability" %}</h2>
+               <p>{% trans "Quickly explore climate projections, impacts and vulnerability information for your area" %}</p>
+               <p><a class="btn pull-right" href="{% url vulnerability %}">{% trans "Learn more" %} &raquo;</a></p>
             </div>
             <div class="span5 niceblock">
-               <h2>Adaptation and Opportunities</h2>
-               <p>Learn and explore options to adapt to climate change</p>
-               <p><a class="btn pull-right" href="{% url adaptation %}">Learn more &raquo;</a></p>
+               <h2>{% trans "Adaptation and Opportunities" %}</h2>
+               <p>{% trans "Learn and explore options to adapt to climate change" %}</p>
+               <p><a class="btn pull-right" href="{% url adaptation %}">{% trans "Learn more" &raquo;</a></p>
             </div>
             <div class="span5 niceblock">
-               <h2>Resources</h2>
-               <p>Information, Articles and Links</p>
-               <p><a class="btn pull-right" href="{% url resources %}">View details &raquo;</a></p>
+               <h2>{% trans "Resources" %}</h2>
+               <p>{% trans "Information, Articles and Links" %}</p>
+               <p><a class="btn pull-right" href="{% url resources %}">{% trans "View details" %} &raquo;</a></p>
             </div>
  
          </div>
           <div class="row">
             <div class="span5 niceblock">
-               <h2>Tools and Maps</h2>
-               <p>For citizens and decision makers to learn more about climate change and it's impacts.
+               <h2>{% trans "Tools and Maps" %}</h2>
+               <p>{% trans "For citizens and decision makers to learn more about climate change and it's impacts." %}</p>
                <ul>
-                <li>Interactive maps</li>
-                <li>Simulations</li>
+                <li>{% trans "Interactive maps" %}</li>
+                <li>{% trans "Simulations" %}</li>
                </ul>
-               <p><a class="btn pull-right" href="{% url tools %}">View interactive simulations &raquo;</a></p>
+               <p><a class="btn pull-right" href="{% url tools %}">{% trans "View interactive simulations" %} &raquo;</a></p>
             </div>
  
              <div class="span5 niceblock">
-               <h2>Raw Data</h2>
-                <p>Find and download the raw data used in many of the country's research initiatives.</p>
+               <h2>{% trans "Raw Data" %}</h2>
+                <p>{% trans "Find and download the raw data used in many of the country's research initiatives." %}</p>
                 <p>
     <form action="{% url search %}" method="POST">
       {% csrf_token %}
        <input class="span4" type="text" id="search_query" name="q" />
-       <button class="btn small primary pull-right" type="submit" id="submit_search">Search</button>
+       <button class="btn small primary pull-right" type="submit" id="submit_search">{% trans "Search" %}</button>
     </form>
                </p>
 	       <p><a class="btn pull-right" href="{% url search %}">{% trans "View all layers" %} &raquo;</a></p>
             </div>
            <div class="span5 niceblock">
-               <h2>About</h2>
+               <h2>{% trans "About" %}</h2>
                <ul>
-                 <li>Who are we?</li>
-                 <li>What do we do?</li>
-                 <li>FAQ</li>
+                 <li>{% trans "Who are we?" %}</li>
+                 <li>{% trans "What do we do?" %}</li>
+                 <li>{% trans "FAQ" %}</li>
                </ul>
-               <p><a class="btn pull-right" href="{% url about %}">Learn more &raquo;</a></p>
+               <p><a class="btn pull-right" href="{% url about %}">{% trans "Learn more" %} &raquo;</a></p>
             </div>
           </div>
         </div><!-- /container -->

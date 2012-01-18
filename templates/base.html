@@ -197,15 +197,15 @@ border-bottom: none;
 <div class="topbar">
   <div class="topbar-inner">
     <div class="container-fluid">
-      <a class="brand" href="{% url index %}">Mozambique Adaptation</a>
+      <a class="brand" href="{% url index %}">{% trans "Mozambique Adaptation" %}</a>
       <ul class="nav">
-        <li><a id="nav-vulnerability" href="{% url vulnerability %}">Vulnerability</a></li>
-        <li><a id="nav-adaptation" href="{% url adaptation %}">Adaptation</a></li>
-        <li><a id="nav-resources" href="{% url resources %}">Resources</a></li>
+        <li><a id="nav-vulnerability" href="{% url vulnerability %}">{% trans "Vulnerability" %}</a></li>
+        <li><a id="nav-adaptation" href="{% url adaptation %}">{% trans "Adaptation" %}</a></li>
+        <li><a id="nav-resources" href="{% url resources %}">{% trans "Resources" %}</a></li>
         <li><a id="nav-data" href="{% url search %}">{% trans "Data" %}</a></li>
         <li><a id="nav-tools" href="{% url tools %}">{% trans "Tools" %}</a></li>
 
-        <li><a id="nav-about" href="{% url about %}">About</a></li>
+        <li><a id="nav-about" href="{% url about %}">{% trans "About" %}</a></li>
      </ul>
  {% if csrf_token != "NOTPROVIDED"  %}
    {% get_current_language as LANGUAGE %}
@@ -242,10 +242,10 @@ border-bottom: none;
       {% if csrf_token != "NOTPROVIDED"  %}
         {% if not user.is_authenticated %}
         <form id="login-form" action="/accounts/login/" method="post" accept-charset="utf-8" class="pull-right span6">
-             <input class="input-small" type="text" name="username" placeholder="Username">
-             <input class="input-small" type="password" name="password" placeholder="Password">
+             <input class="input-small" type="text" name="username" placeholder="{% trans "Username" %} ">
+             <input class="input-small" type="password" name="password" placeholder="{% trans "Password" %}">
              {% csrf_token %}
-             <button class="btn" type="submit">Sign in</button>
+             <button class="btn" type="submit">{% trans "Sign in" %}</button>
         </form>
         {% endif %}
       {% endif %}
