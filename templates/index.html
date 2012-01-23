@@ -66,7 +66,7 @@
                 <p>
     <form action="{% url search %}" method="POST">
       {% csrf_token %}
-       <input class="span4" type="text" id="search_query" name="q" />
+       <input class="span3" type="text" id="search_query" name="q" />
        <button class="btn small primary pull-right" type="submit" id="submit_search">{% trans "Search" %}</button>
     </form>
                </p>
