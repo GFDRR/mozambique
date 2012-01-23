@@ -67,7 +67,7 @@
     <form action="{% url search %}" method="POST">
       {% csrf_token %}
        <input class="span3" type="text" id="search_query" name="q" />
-       <button class="btn small primary pull-right" type="submit" id="submit_search">{% trans "Search" %}</button>
+       <button class="span2 btn small primary pull-right" type="submit" id="submit_search">{% trans "Search" %}</button>
     </form>
                </p>
 	       <p><a class="btn pull-right" href="{% url search %}">{% trans "View all layers" %} &raquo;</a></p>
