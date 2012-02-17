@@ -6,27 +6,39 @@
 {% block head %}
 {{ block.super }}
 <style>
+/* Override some defaults */
+html, body {
+    background-color: #eee;
+    background-image: url("{{ STATIC_URL }}theme/background/background7.jpg");
+    background-repeat: no-repeat;
+}
+
 .niceblock{
-  background: #fff;
   height: 250px;
   margin-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  background: url({{ STATIC_URL }}/theme/wash-white-30.png) #ffe;
-  border: 3px solid white;
+  background: url({{ STATIC_URL }}/theme/wash-white-30.png) transparent;
+  border: 1px solid white;
+  color: #eee;
+ 
 }
 .niceblock h2{
   margin-top: 20px;
   margin-bottom: 10px;
+  font-size: 36px;
+  color: #fff;
+  font-weight: normal;
+}
+
+.niceblock li {
+  color: #eee;
 }
 
 .container {
   width: 1020px;
 }
 
-#ingc-logo{
-  padding-bottom: 10px;
-}
 </style>
 {% endblock %}
 
@@ -78,7 +90,7 @@
             </div>
            <div class="span5 niceblock">
                <h2>{% trans "About" %}</h2>
-               <span id="ingc-logo"><img src="{{ STATIC_URL}}theme/ingc-logo.jpeg" alt="INGC"></span>
+              <img src="{{ STATIC_URL }}/theme/ingc-logo.jpeg"
                <ul>
                  <li>{% trans "Who are we?" %}</li>
                  <li>{% trans "What do we do?" %}</li>

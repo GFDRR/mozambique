@@ -30,9 +30,21 @@ margin-top: 5px;
 clear: both;
 }
 
+#sidebarinfo {
+overflow: scroll !important;
+}
+
 #description{
 padding-top:10px;
 padding-bottom:10px;
+}
+
+#description h1 {
+font-size: 32px;
+}
+
+#description p {
+font-size: 12px;
 }
 #information{
 padding-left: 50px;
@@ -230,7 +242,7 @@ width: 100px;
 {% endblock %}
 
 {% block sidebar %}
-<div class="well">
+<div id="sidebarinfo" class="well">
     <h2> {% trans "Download" %} </h2>
     <p>{% trans "Below are links to download the raw data and metadata for this layer. The most used download format is colored in blue." %}</p>
     <h4>{% trans "Data" %}</h4>

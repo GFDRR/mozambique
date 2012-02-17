@@ -39,7 +39,7 @@ TIME_ZONE = 'America/Chicago'
 LANGUAGE_CODE = 'pt'
 
 LANGUAGES = (
-    ('en', 'English'),
+#    ('en', 'English'),
     ('pt', 'Portuguese'),
 )
 
@@ -179,20 +179,6 @@ DEFAULT_LAYER_SOURCE = {
 }
 
 MAP_BASELAYERS = [{
-    "source": {"ptype": "gx_olsource"},
-    "type":"OpenLayers.Layer",
-    "args":["No background"],
-    "visibility": False,
-    "fixed": True,
-    "group":"background"
-  },{
-    "source": { "ptype":"gx_olsource"},
-    "type":"OpenLayers.Layer.OSM",
-    "args":["OpenStreetMap"],
-    "visibility": False,
-    "fixed": True,
-    "group":"background"
-  },{
     "source": { "ptype":"gxp_mapboxsource"},
     "name":"bluemarble-topo-bathy-jan",
     "group":"background"
@@ -203,27 +189,9 @@ MAP_BASELAYERS = [{
     "visibility": True
   },{
     "source": {"ptype": "gxp_bingsource"},
-    "name": "Aerial",
+    "name": "AerialWithLabels",
     "group": "background",
     "visibility": False
-  },{
-    "source": {"ptype":"gx_olsource"},
-    "type":"OpenLayers.Layer.WMS",
-    "group":"background",
-    "visibility": False,
-    "fixed": True,
-    "args":[
-      "OpenGeo Bluemarble",
-      "http://maps.opengeo.org/geowebcache/service/wms",
-      {
-        "layers":["bluemarble"],
-        "format":"image/png",
-        "tiled": True,
-        "tilesOrigin":[-20037508.34,-20037508.34]
-      },
-      {"buffer":0}
-    ]
-
 }]
 
 # use new uploader

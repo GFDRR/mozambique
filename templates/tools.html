@@ -3,11 +3,17 @@
 {% block head %}
 {{ block.super }}
 <style>
-#droughtmap p, #droughtmap h4, #droughtmap iframe{
-   margin-left: 20px;
+#droughtmap p, #droughtmap h4, #droughtmap iframe, #droughtmap a img{
+   margin-left: 0px;
 }
 iframe {
    border: 5px #404040 solid;
+}
+#riskmap a{
+margin-left: 150px;
+}
+.risiko{
+margin-left: 325px;
 }
 </style>
 {%endblock%}
@@ -20,7 +26,7 @@ iframe {
 <h4><a href="{{ object.get_absolute_url }}/view">{{ object.title }}</a></h4>
 <p>{{ object.abstract }}</p>
     <a href="{{ object.get_absolute_url }}/view">
-      <img class="thumbnail" src="http://placehold.it/210x150" alt="">
+      <img class="thumbnail" src="{{ STATIC_URL }}/theme/img/mapscreens/{{object.id}}.png" width="200" alt="">
     </a>
 </li>
 {% empty %}
@@ -39,19 +45,26 @@ iframe {
     <h1>{% trans "Tools and Maps" %}</h1>
   </div>
  <div id="grid" class="well">
+<div class="row">
+<div class="span6"><h4>{% trans "Disaster Loss Database"%}</h4>
+</div>
+<div class="span6"><h4>{% trans "Exposure to Drought - UNEP/GRID" %}</h4>
+</div>
+</div>
   <ul class="media-grid">
-   <li>
-    <a href="#"><img class="thumbnail" src="http://placehold.it/330x230" alt=""></a>
-   </li>
-   <li><h4>{% trans "National Disaster Loss Database" %}</h4>
-    <a href="http://www.gripweb.org/gripweb/?q=countries-risk-information/databases-information-systems/national-disaster-loss-database-mozambique"><img class="thumbnail" src="http://placehold.it/330x230" alt=""></a>
-   </li>
    <li id="droughtmap">
-     <iframe src='http://a.tiles.mapbox.com/v2/worldbank-climate.drought,worldbank-climate.wbc-borders/mm/tooltips,bwdetect,zoombox,attribution.html#5/-18/35' frameborder='0' width='330' height='230'></iframe>
-   <h4>{% trans "Exposure to Drought - UNEP/GRID" %}</h4>
-     <p>{% trans "Number of people exposed to drought per year." %}</p>
-   </li>
+    <a href="http://www.gripweb.org/gripweb/?q=countries-risk-information/databases-information-systems/national-disaster-loss-database-mozambique"><img style="border:5px #404040 solid;" src="{{ STATIC_URL }}/theme/img/gripscreen.png" height='230' alt=""></a>
 
+</li>
+ <li id="droughtmap"><a>
+     <iframe src='http://a.tiles.mapbox.com/v2/worldbank-climate.drought,worldbank-climate.wbc-borders/mm/tooltips,bwdetect,zoombox,attribution.html#5/-18/35' frameborder='0' width='330' height='230'></iframe>
+  </a> </li>
+<div class="row">
+<div class="span10">
+<h4 class="risiko">Risk in a Box</h4></div></div>
+<li id="riskmap">
+<a href="/impact"><img src="{{ STATIC_URL }}/theme/img/risk.png" height='230' style="border:5px #404040 solid;align:center;"></a>
+</li>
   </ul>
  </div>
 </div>

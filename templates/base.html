@@ -45,8 +45,12 @@
       html, body {
         background-color: #eee;
       }
+ 
+      .footer {
+         border: none;
+      }
       body {
-        padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
+        padding-top: 94px; /* 40px to make the container go all the way to the bottom of the topbar */
       }
       .container > footer p {
         text-align: center; /* center align it with the container */
@@ -198,8 +202,7 @@ border-bottom: none;
   <div class="topbar-inner">
     <div class="container-fluid">
       <a class="brand" href="{% url index %}">
-            <img height="20px" src="{{ STATIC_URL }}theme/ingc-logo.jpeg" alt="INGC">
-            {% trans "Mozambique Adaptation" %}</a>
+            INGC :: {% trans "moz-adapt" %}</a>
       <ul class="nav">
         <li><a id="nav-vulnerability" href="{% url vulnerability %}">{% trans "Vulnerability" %}</a></li>
         <li><a id="nav-adaptation" href="{% url adaptation %}">{% trans "Adaptation" %}</a></li>
@@ -226,7 +229,11 @@ border-bottom: none;
         {% if user.is_authenticated %}
   <ul class="pull-right" id="account-menu">
         <li class="dropdown" data-dropdown="dropdown">
-          <a href="#" class="dropdown-toggle">{{ user.first_name }} {{ user.last_name }} {% avatar user 15 %}</a>
+          <a href="#" class="dropdown-toggle">{{ user.first_name }} {{ user.last_name }}
+
+
+ {% avatar user 15 %}
+</a>
           <ul class="dropdown-menu">
             {% if user.is_staff %}
             <li><a href="/data/upload">{% trans "Upload data" %}</a></li>
