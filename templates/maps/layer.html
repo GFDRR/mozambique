@@ -40,7 +40,7 @@ padding-bottom:10px;
 }
 
 #description h1 {
-font-size: 32px;
+font-size: 25px;
 }
 
 #description p {
@@ -162,7 +162,7 @@ width: 100px;
 <div id="preview_map"></div>
 
 <div class="well" id="information">
-<h2>Information</h2>
+<h2>Informações</h2>
   <table>
   <tbody>
 {% if layer.display_type %}<tr><th>{% trans "Type" %}</th><td>{{ layer.display_type }}</td></tr>{% endif %}
@@ -271,7 +271,7 @@ width: 100px;
     {% else %}
         <p> {% trans "This layer is not currently used in any maps." %} </p>
     {% endif %}
-    <p><a class="btn large" href="{% url geonode.maps.views.newmap %}?layer={{layer.typename}}">Create new map</a></p> 
+    <p><a class="btn primary" href="{% url geonode.maps.views.newmap %}?layer={{layer.typename}}">Novo Mapa</a></p> 
 
     {% has_obj_perm user layer "maps.change_layer" as can_change %}
     {% has_obj_perm user layer "maps.delete_layer" as can_delete %}

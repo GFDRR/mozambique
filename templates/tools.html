@@ -15,6 +15,9 @@ margin-left: 150px;
 .risiko{
 margin-left: 325px;
 }
+.sidebar h5{
+line-height:20px;
+}
 </style>
 {%endblock%}
 {% block sidebar %}
@@ -23,7 +26,7 @@ margin-left: 325px;
 <ol>
 {% for object in object_list %}
 <li>
-<h4><a href="{{ object.get_absolute_url }}/view">{{ object.title }}</a></h4>
+<h5><a href="{{ object.get_absolute_url }}/view">{{ object.title }}</a></h5>
 <p>{{ object.abstract }}</p>
     <a href="{{ object.get_absolute_url }}/view">
       <img class="thumbnail" src="{{ STATIC_URL }}/theme/img/mapscreens/{{object.id}}.png" width="200" alt="">
@@ -53,7 +56,7 @@ margin-left: 325px;
 </div>
   <ul class="media-grid">
    <li id="droughtmap">
-    <a href="http://www.gripweb.org/gripweb/?q=countries-risk-information/databases-information-systems/national-disaster-loss-database-mozambique"><img style="border:5px #404040 solid;" src="{{ STATIC_URL }}/theme/img/gripscreen.png" height='230' alt=""></a>
+    <a href="http://62.2.195.177/DesInventar/"><img style="border:5px #404040 solid;" src="{{ STATIC_URL }}/theme/img/gripscreen.png" height='230' alt=""></a>
 
 </li>
  <li id="droughtmap"><a>
