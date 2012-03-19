@@ -19,6 +19,24 @@ margin-left: 325px;
 line-height:20px;
 }
 </style>
+{% include "geonode/ext_header.html" %}
+{% include "geonode/app_header.html" %}
+{{ block.super }}
+<script type="text/javascript">
+Ext.onReady(function(){
+
+{% autoescape off %}
+  var submitForm = function() {
+      Ext.query('#search_form form')[0].submit();
+  };
+  var searchButton = new Ext.Button({renderTo: 'submit_search', text: '{% trans "Search" %}',
+                                     handler: submitForm});
+  var searchInput = new Ext.form.TextField({applyTo: 'search_query', width: 350});
+{% endautoescape %}
+
+});
+</script>
+
 {%endblock%}
 {% block sidebar %}
 <div class="well">
@@ -49,9 +67,9 @@ line-height:20px;
   </div>
  <div id="grid" class="well">
 <div class="row">
-<div class="span6"><h4>{% trans "Disaster Loss Database"%}</h4>
+<div class="span6"><h4>{% trans "Banco de Dados perda Desastre"%}</h4>
 </div>
-<div class="span6"><h4>{% trans "Exposure to Drought - UNEP/GRID" %}</h4>
+<div class="span6"><h4>{% trans "Calculadora de Risco" %}</h4>
 </div>
 </div>
   <ul class="media-grid">
@@ -59,16 +77,32 @@ line-height:20px;
     <a href="http://62.2.195.177/DesInventar/"><img style="border:5px #404040 solid;" src="{{ STATIC_URL }}/theme/img/gripscreen.png" height='230' alt=""></a>
 
 </li>
- <li id="droughtmap"><a>
-     <iframe src='http://a.tiles.mapbox.com/v2/worldbank-climate.drought,worldbank-climate.wbc-borders/mm/tooltips,bwdetect,zoombox,attribution.html#5/-18/35' frameborder='0' width='330' height='230'></iframe>
-  </a> </li>
-<div class="row">
-<div class="span10">
-<h4 class="risiko">Risk in a Box</h4></div></div>
-<li id="riskmap">
+ <li id="droughtmap">
 <a href="/impact"><img src="{{ STATIC_URL }}/theme/img/risk.png" height='230' style="border:5px #404040 solid;align:center;"></a>
 </li>
   </ul>
+  <div id="search_form" class="block">
+    <h2>{% trans "Search" %} <span class="subtitle">{% trans "for maps" %}</span></h2>
+
+    <form action="{% url maps_search %}" method="POST">
+      {% csrf_token %}
+      <table>
+        <tr>
+          <td>
+            <input type="text" id="search_query" name="q" />
+          </td>
+          <td>
+            <div id="submit_search"></div>
+          </td>
+        </tr>
+      </table>
+      <p>
+        <a href="{% url maps_search %}">{% trans "All Maps" %}</a> |
+        <a href="{% url maps_search %}?sort=last_modified&dir=DESC">{% trans "New Maps" %}</a>
+      </p>
+    </form>
+  </div>
+
  </div>
 </div>
 {% endblock %}

@@ -280,12 +280,14 @@ width: 100px;
     <p> {% trans "The following styles are associated with this data set. Click on a style name to view or edit the style." %}</p>
     <h4>{{ layer.default_style.name }} <span class="label">Default</span></h4>
         <input type="radio" name="style" id="{{layer.publishing.default_style.name}}" value="{{layer.publishing.default_style.name}}" checked="checked"/>
-        <a class="btn style-title" href="#">Edit</a>
+{% if user.is_authenticated and can_change %} 
+       <a class="btn style-title" href="#">Edit</a>{% endif %}
         <a class="btn" target="_blank" href="{{ layer.default_style.body_href }}">Download SLD</a>
     {% for style in layer.styles %} 
        <h4>{{ style.name }}</h4>
         <input type="radio" name="style" id="{{style.name}}" value="{{style.name}}"/>
-        <a class="btn style-title" href="#">Edit</a>
+{% if user.is_authenticated and can_change %}   
+     <a class="btn style-title" href="#">Edit</a>{% endif %}
         <a class="btn" target="_blank" href="{{ style.body_href }}">Download SLD</a>
     {% endfor %}
    </p>

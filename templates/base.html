@@ -207,7 +207,8 @@ border-bottom: none;
       <a class="brand" href="{% url index %}">
             INGC :: {% trans "moz-adapt" %}</a>
       <ul class="nav">
-        <li><a id="nav-vulnerability" href="{% url vulnerability %}">{% trans "Vulnerability" %}</a></li>
+        <!-- <li><a id="nav-vulnerability" href="{% url vulnerability %}">{% trans "Vulnerability" %}</a></li> -->
+        <li><a id="nav-vulnerability" href="http://sdwebx.worldbank.org/climateportal/index.cfm?page=country_historical_climate&ThisRegion=Africa&ThisCCode=MOZ">{% trans "Vulnerability"%}</a></li>
         <li><a id="nav-adaptation" href="{% url adaptation %}">{% trans "Adaptation" %}</a></li>
         <li><a id="nav-resources" href="{% url resources %}">{% trans "Resources" %}</a></li>
         <li><a id="nav-data" href="{% url search %}">{% trans "Data" %}</a></li>
