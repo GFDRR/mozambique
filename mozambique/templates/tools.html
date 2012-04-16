@@ -24,19 +24,19 @@ line-height:20px;
 {{ block.super }}
 <script type="text/javascript">
 Ext.onReady(function(){
+   {% autoescape off %}
+ 
+    var searchTable = new GeoNode.MapSearchTable({
+        renderTo: 'search_results',
+        trackSelection: true,
+        permalinkURL: '{% url maps_search %}',
+        searchURL: '{% url maps_search_api %}',
+    });
 
-{% autoescape off %}
-  var submitForm = function() {
-      Ext.query('#search_form form')[0].submit();
-  };
-  var searchButton = new Ext.Button({renderTo: 'submit_search', text: '{% trans "Search" %}',
-                                     handler: submitForm});
-  var searchInput = new Ext.form.TextField({applyTo: 'search_query', width: 350});
-{% endautoescape %}
 
+    {% endautoescape %}
 });
 </script>
-
 {%endblock%}
 {% block sidebar %}
 <div class="well">
@@ -82,25 +82,15 @@ Ext.onReady(function(){
 </li>
   </ul>
   <div id="search_form" class="block">
+    <div class="block">
     <h2>{% trans "Search" %} <span class="subtitle">{% trans "for maps" %}</span></h2>
 
-    <form action="{% url maps_search %}" method="POST">
-      {% csrf_token %}
-      <table>
-        <tr>
-          <td>
-            <input type="text" id="search_query" name="q" />
-          </td>
-          <td>
-            <div id="submit_search"></div>
-          </td>
-        </tr>
-      </table>
-      <p>
-        <a href="{% url maps_search %}">{% trans "All Maps" %}</a> |
-        <a href="{% url maps_search %}?sort=last_modified&dir=DESC">{% trans "New Maps" %}</a>
-      </p>
-    </form>
+    <div id="search_results"></div>
+
+    <p class="explain">{%trans "Click the <b>+</b> on any row to show map abstract." %}
+      {% trans "To bookmark your current search use this" %} <a href="#" class="permalink">{% trans "permalink" %}</a>
+    </p>
+  </div>
   </div>
 
  </div>
