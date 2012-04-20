@@ -5,6 +5,7 @@ from geonode.sitemap import LayerSitemap, MapSitemap
 from geonode.proxy.urls import urlpatterns as proxy_urlpatterns
 from geonode.maps.models import Map
 
+
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
@@ -19,7 +20,9 @@ sitemaps = {
     "map": MapSitemap
 }
 
+
 maps_queryset = Map.objects.all().order_by('-id')[:5]
+
 
 urlpatterns = patterns('',
     # Example:
@@ -28,7 +31,7 @@ urlpatterns = patterns('',
                 {'template': 'index.html'}, name='index' ),
     (r'^(?P<page>help)/?$', 'geonode.views.static'),
     (r'^developer/?$', 'geonode.views.developer'),
-    (r'^rosetta/', include('rosetta.urls')),
+    #need rossetta here
     url(r'^adaptation$', 'django.views.generic.simple.direct_to_template',
                    {'template': 'adaptation.html'}, name='adaptation'),
     url(r'^about$', 'django.views.generic.simple.direct_to_template',
@@ -41,7 +44,6 @@ urlpatterns = patterns('',
     url(r'^tools$', 'django.views.generic.list_detail.object_list',
                    {'queryset': maps_queryset, 'template_name': 'tools.html'},
                    name='tools'),
-
     url('^impact/', include('impact.urls')),
     url(r'^lang\.js$', 'django.views.generic.simple.direct_to_template',
                {'template': 'lang.js', 'mimetype': 'text/javascript'}, 'lang'),
@@ -55,7 +57,6 @@ urlpatterns = patterns('',
     url(r'^data/api/batch_delete/?$', 'geonode.maps.views.batch_delete'),
     url(r'^data/upload$', 'geonode.maps.views.upload_layer', name='data_upload'),
     (r'^data/download$', 'geonode.maps.views.batch_layer_download'),
-    url(r'^data/create_layer', 'geonode.maps.views.create_layer', name='create_layer'),
     (r'^data/(?P<layername>[^/]*)$', 'geonode.maps.views.layerController'),
     (r'^data/(?P<layername>[^/]*)/ajax-permissions$', 'geonode.maps.views.ajax_layer_permissions'),
     (r'^admin/', include(admin.site.urls)),
@@ -75,12 +76,4 @@ urlpatterns += proxy_urlpatterns
 
 # Extra static file endpoint for development use
 if settings.SERVE_MEDIA:
-    urlpatterns += [url(r'^static/thumbs/(?P<path>.*)$','django.views.static.serve',{
-        'document_root' : settings.STATIC_ROOT + "/thumbs"
-    })]
-    urlpatterns += [url(r'^uploaded/(?P<path>.*)$','django.views.static.serve',{
-        'document_root' : settings.MEDIA_ROOT
-    })]
- 
     urlpatterns += staticfiles_urlpatterns()
-    
