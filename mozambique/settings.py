@@ -178,20 +178,21 @@ DEFAULT_LAYER_SOURCE = {
     "restUrl": "/gs/rest"
 }
 
-MAP_BASELAYERS = [{
-    "source": { "ptype":"gxp_mapboxsource"},
-    "name":"bluemarble-topo-bathy-jan",
-    "group":"background"
-  },{
-    "source": { "ptype":"gxp_mapquestsource"},
-    "name":"osm",
-    "group":"background",
-    "visibility": True
-  },{
+MAP_BASELAYERS = [#{
+    #"source": { "ptype":"gxp_mapboxsource"},
+    #"name":"bluemarble-topo-bathy-jan",
+    #"group":"background"
+ # },{
+    #"source": { "ptype":"gxp_mapquestsource"},
+    #"name":"osm",
+    #"group":"background",
+    #"visibility": True
+#  },
+{
     "source": {"ptype": "gxp_bingsource"},
     "name": "AerialWithLabels",
     "group": "background",
-    "visibility": False
+    "visibility": True
 }]
 
 # use new uploader

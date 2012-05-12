@@ -4,20 +4,54 @@
 {% block title %} {% trans "Map Viewer" %} - {{ block.super }} {% endblock %}
 
 {% block head %}
-{{ block.super }}
 {% include "geonode/ext_header.html" %}
-<link rel="stylesheet" type="text/css" href="{{ GEONODE_CLIENT_LOCATION }}externals/geoext/resources/css/gxtheme-gray.css">
 {% include "geonode/app_header.html" %}
 {% include "geonode/geo_header.html" %}
+<script src="http://www.google.com/jsapi?key={{GOOGLE_API_KEY}}"></script>
+<script type="text/javascript">
+    google.load("earth", "1");
+</script>
+
 <link rel="stylesheet" type="text/css" href="{{ GEONODE_CLIENT_LOCATION }}theme/ux/colorpicker/color-picker.ux.css" />
+<style type="text/css">
+    #templates { display: none; }
+</style>
+
 <script src="{{ GEONODE_CLIENT_LOCATION }}script/PrintPreview.js"></script>
 <link rel="stylesheet" type="text/css" href="{{ GEONODE_CLIENT_LOCATION }}externals/PrintPreview/resources/css/printpreview.css" />
 <script src="{{GEOSERVER_BASE_URL}}pdf/info.json?var=printCapabilities" type="text/javascript"></script>
-<script type="text/javascript" src="{% url django.views.i18n.javascript_catalog %}"></script>
-<script type="text/javascript" src="{% url lang %}"></script>
+{{ block.super }}
 
 <script type="text/javascript">
-var app = new GeoExplorer();
+var app;
+Ext.onReady(function() {
+{% autoescape off %}
+    var config = Ext.apply({
+        tools: [{
+            ptype: "gxp_wmsgetfeatureinfo",
+            // uncomment the line below if you want feature info in a grid
+            format: "grid",
+            actionTarget: "main.tbar",
+            outputConfig: {width: 400, height: 300}
+        }],
+        proxy: "/proxy/?url=",
+
+        /* The URL to a REST map configuration service.  This service 
+         * provides listing and, with an authenticated user, saving of 
+         * maps on the server for sharing and editing.
+         */
+        rest: "/maps/",
+        homeUrl: "{% url index %}",
+
+        localGeoServerBaseUrl: "{{ GEOSERVER_BASE_URL }}",
+        csrfToken: "{{ csrf_token }}",
+        authorizedRoles: "{{ user.is_authenticated|yesno:"ROLE_ADMINISTRATOR,ROLE_ANONYMOUS" }}"
+    }, {{ config }});
+
+    app = new GeoExplorer(config);
+
+{% endautoescape %}
+});
 </script>
 
 <style>
@@ -32,5 +66,9 @@ var app = new GeoExplorer();
 {% block main %}
 <div id="header-wrapper">
   {{ block.super }}
+  <div id="topPanel">
+    <div id="more-info"></div>
+    <span id="map-title-header"></span>
+  </div>
 </div>
 {% endblock %}

@@ -76,4 +76,11 @@ urlpatterns += proxy_urlpatterns
 
 # Extra static file endpoint for development use
 if settings.SERVE_MEDIA:
+    urlpatterns += [url(r'^static/thumbs/(?P<path>.*)$','django.views.static.serve',{
+        'document_root' : settings.STATIC_ROOT + "/thumbs"
+    })]
+    urlpatterns += [url(r'^uploaded/(?P<path>.*)$','django.views.static.serve',{
+        'document_root' : settings.MEDIA_ROOT
+    })]
+
     urlpatterns += staticfiles_urlpatterns()

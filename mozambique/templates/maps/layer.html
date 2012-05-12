@@ -134,7 +134,6 @@ width: 100px;
                 }
             });
 {% endif %}
-            {% include "maps/thumbnail_help.js" %}
         });
 
         function showStyle(styleName) {
@@ -316,7 +315,6 @@ width: 100px;
         {% if can_change %}
                 <a class="btn managebtn primary" href="?describe">{% trans "Edit metadata" %}</a>
             	<a class="btn managebtn" href="?update">{% trans "Replace raw data" %}</a>
-            	<a class="btn managebtn" id="set_thumbnail" href="?thumbnail">{% trans "Generate thumbnail" %}</a>
         {% endif %}
         {% if can_change_permissions %}
         <a class="managebtn btn" href="{% url edit_layer_permissions layer.typename %}">{% trans "Edit Permissions" %}</a>
