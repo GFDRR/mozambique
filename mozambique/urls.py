@@ -24,8 +24,6 @@ maps_queryset = Map.objects.all().order_by('-id')[:5]
 
 urlpatterns = patterns('',
 
-urlpatterns = patterns('',
-
     # Static pages
     url(r'^$', 'django.views.generic.simple.direct_to_template',
                 {'template': 'index.html'}, name='home'),
