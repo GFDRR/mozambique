@@ -168,6 +168,62 @@ DEFAULT_LAYER_SOURCE = {
     "restUrl": "/gs/rest"
 }
 
+MAP_BASELAYERS = [{
+    "source": {"ptype": "gx_olsource"},
+    "type":"OpenLayers.Layer",
+    "args":["No background"],
+    "visibility": False,
+    "fixed": True,
+    "group":"background"
+  },{
+    "source": { "ptype":"gx_olsource"},
+    "type":"OpenLayers.Layer.OSM",
+    "args":["OpenStreetMap"],
+    "visibility": False,
+    "fixed": True,
+    "group":"background"
+  },{
+    "source": { "ptype": "gxp_stamensource"},
+    "name": "toner",
+    "group": "background",
+    "visibility": False
+  },{
+    "source": { "ptype":"gxp_mapquestsource"},
+    "name":"osm",
+    "group":"background",
+    "visibility": True
+  },{
+    "source": { "ptype":"gxp_mapquestsource"},
+    "name":"naip",
+    "group":"background",
+    "visibility": False
+  },{
+    "source": {"ptype": "gxp_bingsource"},
+    "name": "AerialWithLabels",
+    "visibility": False,
+    "group":"background",
+  },{
+    "source": {"ptype": "gxp_mapboxsource"},
+  },{
+    "source": {"ptype":"gx_olsource"},
+    "type":"OpenLayers.Layer.WMS",
+    "group":"background",
+    "visibility": False,
+    "fixed": True,
+    "args":[
+      "bluemarble",
+      "http://maps.opengeo.org/geowebcache/service/wms",
+      {
+        "layers":["bluemarble"],
+        "format":"image/png",
+        "tiled": True,
+        "tilesOrigin":[-20037508.34,-20037508.34]
+      },
+      {"buffer":0}
+    ]
+
+}]
+
 # use new uploader
 USE_UPLOADER=True
 
