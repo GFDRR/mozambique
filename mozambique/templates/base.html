@@ -208,13 +208,13 @@ table th, table td {
 <div class="topbar">
   <div class="topbar-inner">
     <div class="container-fluid">
-      <a class="brand" href="{% url index %}">
+      _<a class="brand" href="{% url home %}">
             INGC :: {% trans "moz-adapt" %}</a>
       <ul class="nav">
         <li><a id="nav-vulnerability" href="{% url vulnerability %}">{% trans "Vulnerability" %}</a></li>
         <li><a id="nav-adaptation" href="{% url adaptation %}">{% trans "Adaptation" %}</a></li>
         <li><a id="nav-resources" href="{% url resources %}">{% trans "Resources" %}</a></li>
-        <li><a id="nav-data" href="{% url search %}">{% trans "Data" %}</a></li>
+        <li><a id="nav-data" href="{% url data_search %}">{% trans "Data" %}</a></li>
         <li><a id="nav-tools" href="{% url tools %}">{% trans "Tools" %}</a></li>
 
         <li><a id="nav-about" href="{% url about %}">{% trans "About" %}</a></li>
