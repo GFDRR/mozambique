@@ -3,6 +3,18 @@
 
 {% block active-tab %}'#nav-adaptation'{% endblock %}
 
+{% block head %}
+{{ block.super }}
+<style>
+table td{
+  height: 30px;
+}
+#download-table {
+  margin-top: 20px;
+  width: 600px;
+}
+</style>
+{% endblock %}
 
 {% block main %}
 <div id="main" class="container">
@@ -15,12 +27,65 @@
 </li></ul></p><p>
 As histórias seguintes são entregues digitalmente em formato KMZ, visível na sua totalidade, usando a plataforma Google Earth.
 </p>
-<ul><li>História 1: Visão geral Setorial e Regional dos Impactos Climáticos</li><li>História 2: Lições da experiência de Aviso previo no INGC </li>
-<li>História 3 Enredo: Os fluxos de informação e eficaz resposta às catástrofes</li><li>História 4: Redução da Vulnerabilidade </li>
-</ul></p><p>
+
+
+  <h2>Histórias</h2>
+  <table class="table table-bordered table-striped" id="download-table">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Download</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>História 1: Impactos das Mudanças Climáticas</td>
+        <td>
+          <a href="{{ STATIC_URL }}kmz/Storyline 1 Impacts of Climate Change.kmz">
+            <img src="{{ STATIC_URL }}kmz/kmz.png" width="32px" />
+         </a>
+</td>
+      </tr>
+     <tr>
+        <td>História 2: Lições da Experiência Aviso INGC Precoce - estudo de caso Inundações</td>
+        <td>
+          <a href="{{ STATIC_URL }}kmz/Storyline 2 Lessons from the INGC Early Warning Experience - A Floods Case Study.kmz">
+            <img src="{{ STATIC_URL }}kmz/kmz.png" width="32px" />
+         </a>
+</td>
+      </tr>
+  <tr>
+        <td>História 3: Gestão da Informação durante a resposta de emergência</td>
+        <td>
+          <a href="{{ STATIC_URL }}kmz/Storyline 3 Information Management During Emergency Response.kmz">
+            <img src="{{ STATIC_URL }}kmz/kmz.png" width="32px" />
+         </a>
+</td>
+      </tr>
+  <tr>
+        <td>História 4: Construindo Resistência às Mudanças Climáticas</td>
+        <td>
+          <a href="{{ STATIC_URL }}kmz/Storyline 4 Building Resilience to Climate Change.kmz">
+            <img src="{{ STATIC_URL }}kmz/kmz.png" width="32px" />
+         </a>
+</td>
+      </tr>
+  <tr>
+        <td>História 5 EcoEnergia em Ocua como é que o clima afeta as operações e gestão</td>
+        <td>
+          <a href="{{ STATIC_URL }}kmz/Storyline 5 Ecoenergia at Ocua how does climate affect operations and management.kmz">
+            <img src="{{ STATIC_URL }}kmz/kmz.png" width="32px" />
+         </a>
+</td>
+      </tr>
+ 
+    </tbody>
+  </table>
+<p>
 Para visualizá-las, basta baixar e abrir, em seguida, clicando duas vezes sobre estes. Note que você deve ter o Google Earth instalado no seu computador.
     </p>
   </div>
 </div>
+
 {% endblock %}
 
