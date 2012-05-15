@@ -58,6 +58,7 @@ urlpatterns = patterns('',
                                   {'sitemaps': sitemaps}, name='sitemap'),
     (r'^i18n/', include('django.conf.urls.i18n')),
     (r'^admin/', include(admin.site.urls)), 
+    (r'^rosetta/', include('rosetta.urls')),
 
     # Mozambique
     url(r'^adaptation$', 'django.views.generic.simple.direct_to_template',

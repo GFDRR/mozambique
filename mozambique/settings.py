@@ -82,7 +82,6 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static_root')
 STATIC_URL = '/static/'
 GEONODE_UPLOAD_PATH = MEDIA_ROOT + 'geonode'
 GEONODE_CLIENT_LOCATION = STATIC_URL + 'geonode/'
-GEONODE_CLIENT_LOCATION = 'http://localhost:8080/'
 ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
 STATICFILES_STORAGE = 'staticfiles.storage.StaticFilesStorage'
@@ -198,11 +197,6 @@ MAP_BASELAYERS = [{
     "name":"naip",
     "group":"background",
     "visibility": False
-  },{
-    "source": {"ptype": "gxp_bingsource"},
-    "name": "AerialWithLabels",
-    "visibility": False,
-    "group":"background",
   },{
     "source": {"ptype": "gxp_mapboxsource"},
   },{

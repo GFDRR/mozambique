@@ -20,26 +20,27 @@ table td{
 <div id="main" class="container">
   <div class="well">
     <h1>{% trans "Adaptation and Opportunities" %}</h1>
-    <p>
-    Compilamos uma série de histórias sobre a plataforma de Google Earth que fornecem um ponto de partida para iniciar o processo de mapeamento das experiências, das instituições e dados sobre as alterações climáticas e gestão de riscos de desastres.  Estas histórias permitem:
-<ul><li>explorar os resultados do trabalho realizadosobre as mudanças climáticas sob o INGC
-</li><li>compreender as questões que envolvem as mudanças climáticas na base de evidência mais recente, incluindo Fase INGC, eu estudo dos impactos das Mudanças Climáticas em Moçambique.
-</li></ul></p><p>
-As histórias seguintes são entregues digitalmente em formato KMZ, visível na sua totalidade, usando a plataforma Google Earth.
-</p>
+{% blocktrans %}
+<p>
+Compiled a series of stories on the Google Earth platform to provide a starting point to begin the process of mapping the experiences of institutions and data on climate change and disaster risk management. These stories allow you to:
+<li> exploit the results of the work realizadosobre climate change under the INGC
+</ li> <li> understand the issues surrounding climate change on the basis of more recent evidence, including INGC Phase I study of the impacts of climate change in Mozambique.
+</ li> </ ul> </ p> <p>
+The following stories are delivered digitally in KMZ format, viewable in its entirety, using the Google Earth platform.
+</ p>
+{% endblocktrans %}
 
-
-  <h2>Histórias</h2>
+  <h2>{% trans "Storylines" %}</h2>
   <table class="table table-bordered table-striped" id="download-table">
   <thead>
       <tr>
-        <th>Name</th>
-        <th>Download</th>
+        <th>{% trans "Name" %}</th>
+        <th>{% trans "Download" %}</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>História 1: Impactos das Mudanças Climáticas</td>
+        <td>{% trans "Storyline 1 - Impacts of Climate Change" %}</td>
         <td>
           <a href="{{ STATIC_URL }}kmz/Storyline 1 Impacts of Climate Change.kmz">
             <img src="{{ STATIC_URL }}kmz/kmz.png" width="32px" />
@@ -47,7 +48,7 @@ As histórias seguintes são entregues digitalmente em formato KMZ, visíve
 </td>
       </tr>
      <tr>
-        <td>História 2: Lições da Experiência Aviso INGC Precoce - estudo de caso Inundações</td>
+        <td>{% trans "Storyline 2 - Lessons from the INGC Early Warning Experience - A Floods Case Study" %}</td>
         <td>
           <a href="{{ STATIC_URL }}kmz/Storyline 2 Lessons from the INGC Early Warning Experience - A Floods Case Study.kmz">
             <img src="{{ STATIC_URL }}kmz/kmz.png" width="32px" />
@@ -55,7 +56,7 @@ As histórias seguintes são entregues digitalmente em formato KMZ, visíve
 </td>
       </tr>
   <tr>
-        <td>História 3: Gestão da Informação durante a resposta de emergência</td>
+        <td>{% trans "Storyline 3 - Information Management During Emergency Response" %}</td>
         <td>
           <a href="{{ STATIC_URL }}kmz/Storyline 3 Information Management During Emergency Response.kmz">
             <img src="{{ STATIC_URL }}kmz/kmz.png" width="32px" />
@@ -63,7 +64,7 @@ As histórias seguintes são entregues digitalmente em formato KMZ, visíve
 </td>
       </tr>
   <tr>
-        <td>História 4: Construindo Resistência às Mudanças Climáticas</td>
+        <td>{% trans "Storyline 4 - Building Resilience to Climate Change" %}</td>
         <td>
           <a href="{{ STATIC_URL }}kmz/Storyline 4 Building Resilience to Climate Change.kmz">
             <img src="{{ STATIC_URL }}kmz/kmz.png" width="32px" />
@@ -71,7 +72,7 @@ As histórias seguintes são entregues digitalmente em formato KMZ, visíve
 </td>
       </tr>
   <tr>
-        <td>História 5 EcoEnergia em Ocua como é que o clima afeta as operações e gestão</td>
+        <td>{% trans "Storyline 5 - Ecoenergia at Ocua how does climate affect operations and management" %}</td>
         <td>
           <a href="{{ STATIC_URL }}kmz/Storyline 5 Ecoenergia at Ocua how does climate affect operations and management.kmz">
             <img src="{{ STATIC_URL }}kmz/kmz.png" width="32px" />
@@ -81,9 +82,11 @@ As histórias seguintes são entregues digitalmente em formato KMZ, visíve
  
     </tbody>
   </table>
+{% blocktrans %}
 <p>
 Para visualizá-las, basta baixar e abrir, em seguida, clicando duas vezes sobre estes. Note que você deve ter o Google Earth instalado no seu computador.
     </p>
+{% endblocktrans %}
   </div>
 </div>
 
