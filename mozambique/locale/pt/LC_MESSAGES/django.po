@@ -2,22 +2,21 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-15 11:42-0500\n"
-"PO-Revision-Date: 2012-01-23 09:53\n"
-"Last-Translator: Fernanda Zermoglio The World Bank <fernandazermoglio@gmail."
-"com>\n"
+"POT-Creation-Date: 2012-05-15 11:46-0500\n"
+"PO-Revision-Date: 2012-05-15 11:59\n"
+"Last-Translator: Bruce Wayne <admin@admin.admin>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: \n"
-"X-Translated-Using: django-rosetta 0.6.4\n"
+"X-Translated-Using: django-rosetta 0.6.6\n"
 
 #: templates/about.html:8 templates/base.html:220 templates/index.html:87
 msgid "About"
@@ -31,25 +30,25 @@ msgstr "Adaptação e Oportunidades"
 msgid ""
 "\n"
 "<p>\n"
-"Compiled a series of stories on the Google Earth platform to provide a "
-"starting point to begin the process of mapping the experiences of "
-"institutions and data on climate change and disaster risk management. These "
-"stories allow you to:\n"
-"<li> exploit the results of the work realizadosobre climate change under the "
-"INGC\n"
-"</ li> <li> understand the issues surrounding climate change on the basis of "
-"more recent evidence, including INGC Phase I study of the impacts of climate "
-"change in Mozambique.\n"
+"Compiled a series of stories on the Google Earth platform to provide a starting point to begin the process of mapping the experiences of institutions and data on climate change and disaster risk management. These stories allow you to:\n"
+"<li> exploit the results of the work realizadosobre climate change under the INGC\n"
+"</ li> <li> understand the issues surrounding climate change on the basis of more recent evidence, including INGC Phase I study of the impacts of climate change in Mozambique.\n"
 "</ li> </ ul> </ p> <p>\n"
-"The following stories are delivered digitally in KMZ format, viewable in its "
-"entirety, using the Google Earth platform.\n"
+"The following stories are delivered digitally in KMZ format, viewable in its entirety, using the Google Earth platform.\n"
 "</ p>\n"
 msgstr ""
+"\n"
+"    <p>\n"
+"    Compilamos uma série de histórias sobre a plataforma de Google Earth que fornecem um ponto de partida para iniciar o processo de mapeamento das experiências, das instituições e dados sobre as alterações climáticas e gestão de riscos de desastres.  Estas histórias permitem:\n"
+"<ul><li>explorar os resultados do trabalho realizadosobre as mudanças climáticas sob o INGC\n"
+"</li><li>compreender as questões que envolvem as mudanças climáticas na base de evidência mais recente, incluindo Fase INGC, eu estudo dos impactos das Mudanças Climáticas em Moçambique.\n"
+"</li></ul></p><p>\n"
+"As histórias seguintes são entregues digitalmente em formato KMZ, visível na sua totalidade, usando a plataforma Google Earth.\n"
+"</p>\n"
 
 #: templates/adaptation.html:33
-#, fuzzy
 msgid "Storylines"
-msgstr "Estilos"
+msgstr "Histórias"
 
 #: templates/adaptation.html:37 templates/maps/layer.html:190
 msgid "Name"
@@ -61,41 +60,44 @@ msgid "Download"
 msgstr "Baixar"
 
 #: templates/adaptation.html:43
-msgid "História 1: Impactos das Mudanças Climáticas"
-msgstr ""
+msgid "Storyline 1 - Impacts of Climate Change"
+msgstr "História 1 - Impactos das Mudanças Climáticas"
 
 #: templates/adaptation.html:51
 msgid ""
-"História 2: Lições da Experiência Aviso INGC Precoce - estudo de caso "
-"Inundações"
+"Storyline 2 - Lessons from the INGC Early Warning Experience - A Floods Case"
+" Study"
 msgstr ""
+"História 2 - Lições da Experiência Aviso INGC Precoce - estudo de caso "
+"Inundações"
 
 #: templates/adaptation.html:59
-msgid "História 3: Gestão da Informação durante a resposta de emergência"
-msgstr ""
+msgid "Storyline 3 - Information Management During Emergency Response"
+msgstr "História 3 - Gestão da Informação durante a resposta de emergência"
 
 #: templates/adaptation.html:67
-msgid "História 4: Construindo Resistência às Mudanças Climáticas"
-msgstr ""
+msgid "Storyline 4 - Building Resilience to Climate Change"
+msgstr "História 4 - Construindo a resistência à mudança climática"
 
 #: templates/adaptation.html:75
 msgid ""
-"História 5 EcoEnergia em Ocua como é que o clima afeta as operações e gestão"
+"Storyline 5 - Ecoenergia at Ocua how does climate affect operations and "
+"management"
 msgstr ""
+"História 5 - EcoEnergia em Ocua como é que o clima afeta as operações e "
+"gestão"
 
 #: templates/adaptation.html:85
 msgid ""
 "\n"
 "<p>\n"
-"Para visualizá-las, basta baixar e abrir, em seguida, clicando duas "
-"vezes sobre estes. Note que você deve ter o Google Earth instalado no seu "
-"computador.\n"
+"Para visualizá-las, basta baixar e abrir, em seguida, clicando duas vezes sobre estes. Note que você deve ter o Google Earth instalado no seu computador.\n"
 "    </p>\n"
 msgstr ""
 
 #: templates/base.html:212
 msgid "moz-adapt"
-msgstr ""
+msgstr "moz-adapt"
 
 #: templates/base.html:214
 msgid "Vulnerability"
@@ -183,8 +185,8 @@ msgstr "Ferramentas e Mapas"
 
 #: templates/index.html:66
 msgid ""
-"For citizens and decision makers to learn more about climate change and it's "
-"impacts."
+"For citizens and decision makers to learn more about climate change and it's"
+" impacts."
 msgstr ""
 "Para os cidadãos e tomadores de decisão saberem mais sobre as mudanças "
 "climáticas e os seus impactos."
@@ -236,11 +238,11 @@ msgstr "Perguntas Frequentes"
 
 #: templates/maps.html:4
 msgid "Browse Maps"
-msgstr ""
+msgstr "Procurar mapas"
 
 #: templates/maps.html:30 templates/tools.html:86
 msgid "for maps"
-msgstr ""
+msgstr "por mapas"
 
 #: templates/maps.html:45
 #, fuzzy
@@ -262,6 +264,8 @@ msgid ""
 "Use GeoNode's Map Composer application to create your own maps.  Add layers "
 "from this GeoNode or remote services, and style them."
 msgstr ""
+"Use aplicativo GeoNode do Compositor Mapa para criar seus próprios mapas. "
+"Adicionar camadas a partir deste GeoNode ou serviços remotos, e estilo eles."
 
 #: templates/maps.html:56
 #, fuzzy
@@ -270,7 +274,7 @@ msgstr "Criar o seu próprio"
 
 #: templates/resources.html:11
 msgid "UNDP Mozambique in GripWeb"
-msgstr ""
+msgstr "UNDP Moçambique em GripWeb"
 
 #: templates/search_base.html:4
 msgid "Search Data"
@@ -314,7 +318,8 @@ msgid "Selected Data"
 msgstr "Dados seleccionados"
 
 #: templates/search_base.html:86
-msgid "Use the checkboxes in the search results to add data to your selection."
+msgid ""
+"Use the checkboxes in the search results to add data to your selection."
 msgstr ""
 "Utilize as caixas de verificação nos resultados da pesquisa para adicionar "
 "dados à sua selecção"
@@ -376,7 +381,7 @@ msgstr ""
 
 #: templates/vulnerability.html:12
 msgid "GFDRR Mozambique Country Profile"
-msgstr ""
+msgstr "GFDRR Perfil do País Moçambique"
 
 #: templates/avatar/add.html:6 templates/profiles/edit_profile.html:7
 msgid "Your current avatar: "
@@ -473,7 +478,7 @@ msgstr "Atributos"
 
 #: templates/maps/layer.html:213
 msgid "English Description"
-msgstr ""
+msgstr "Descrição Inglês"
 
 #: templates/maps/layer.html:219
 msgid "Data Quality Statement"
@@ -481,15 +486,15 @@ msgstr "Declaração de Qualidade de Dados"
 
 #: templates/maps/layer.html:229
 msgid "Legend"
-msgstr ""
+msgstr "Lenda"
 
 #: templates/maps/layer.html:241
 msgid ""
 "Below are links to download the raw data and metadata for this layer. The "
 "most used download format is colored in blue."
 msgstr ""
-"Abaixo estão as ligações para baixar os dados em bruto ​​e metadados para esta "
-"camada. O formato mais utilizadas de descarregamento é colorido a azul."
+"Abaixo estão as ligações para baixar os dados em bruto ​​e metadados para "
+"esta camada. O formato mais utilizadas de descarregamento é colorido a azul."
 
 #: templates/maps/layer.html:248
 msgid "Metadata"
@@ -574,19 +579,13 @@ msgstr "Este formulario permite-lhe actualizar os dados para esta camada."
 #: templates/maps/layer_replace.html:43
 msgid ""
 "\n"
-"If the new dataset omits attributes that were included in the previous "
-"version,\n"
+"If the new dataset omits attributes that were included in the previous version,\n"
 "or changes their types, then existing styles for the layer may not work.\n"
-"Please check your maps if the new data includes such changes.  "
-"Additionally,\n"
+"Please check your maps if the new data includes such changes.  Additionally,\n"
 "updated data must be the same format as the data already in place, e.g.\n"
 msgstr ""
 "\n"
-"Se o novo conjunto de dados omitir atributos que foram incluídos na versão "
-"anterior ou mudar os seus tipos, então os estilos existentes para a camada "
-"poderão não funcionar. Por favor verifique nos seus mapas se os novos dados "
-"incluem tais mudanças. Adicionalmente, os dados carregados devem ser do "
-"mesmo formato que os dados já carregados, p.e.\n"
+"Se o novo conjunto de dados omitir atributos que foram incluídos na versão anterior ou mudar os seus tipos, então os estilos existentes para a camada poderão não funcionar. Por favor verifique nos seus mapas se os novos dados incluem tais mudanças. Adicionalmente, os dados carregados devem ser do mesmo formato que os dados já carregados, p.e.\n"
 
 #: templates/maps/layer_replace.html:51
 msgid "Select a layer data file and submit the form to begin the transfer."
@@ -644,19 +643,19 @@ msgstr "Próximo"
 
 #: templates/maps/mapinfo.html:54
 msgid "Abstract:"
-msgstr ""
+msgstr "Resumo:"
 
 #: templates/maps/mapinfo.html:58
 msgid "Contact:"
-msgstr ""
+msgstr "Contato:"
 
 #: templates/maps/mapinfo.html:65
 msgid "Download all layers included in this map"
-msgstr ""
+msgstr "Baixe todas as camadas incluídas neste mapa"
 
 #: templates/maps/mapinfo.html:66
 msgid "Layers"
-msgstr ""
+msgstr "Camadas"
 
 #: templates/maps/mapinfo.html:67
 #, fuzzy
@@ -665,7 +664,7 @@ msgstr "Esta acção afecta os seguintes mapas"
 
 #: templates/maps/mapinfo.html:80
 msgid "View or edit this map"
-msgstr ""
+msgstr "Ver ou editar este mapa"
 
 #: templates/maps/mapinfo.html:85
 #, fuzzy
@@ -679,11 +678,11 @@ msgstr "Dados seleccionados"
 
 #: templates/maps/mapinfo.html:90
 msgid "Duplicate map"
-msgstr ""
+msgstr "Duplicar mapa"
 
 #: templates/maps/mapinfo.html:95
 msgid "Select what kind of privileges to allow."
-msgstr ""
+msgstr "Selecione o tipo de privilégios para permitir."
 
 #: templates/maps/view.html:4
 msgid "Map Viewer"

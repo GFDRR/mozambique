@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-15 11:42-0500\n"
+"POT-Creation-Date: 2012-05-15 11:46-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,26 +58,27 @@ msgid "Download"
 msgstr ""
 
 #: templates/adaptation.html:43
-msgid "História 1: Impactos das Mudanças Climáticas"
+msgid "Storyline 1 - Impacts of Climate Change"
 msgstr ""
 
 #: templates/adaptation.html:51
 msgid ""
-"História 2: Lições da Experiência Aviso INGC Precoce - estudo de caso "
-"Inundações"
+"Storyline 2 - Lessons from the INGC Early Warning Experience - A Floods Case "
+"Study"
 msgstr ""
 
 #: templates/adaptation.html:59
-msgid "História 3: Gestão da Informação durante a resposta de emergência"
+msgid "Storyline 3 - Information Management During Emergency Response"
 msgstr ""
 
 #: templates/adaptation.html:67
-msgid "História 4: Construindo Resistência às Mudanças Climáticas"
+msgid "Storyline 4 - Building Resilience to Climate Change"
 msgstr ""
 
 #: templates/adaptation.html:75
 msgid ""
-"História 5 EcoEnergia em Ocua como é que o clima afeta as operações e gestão"
+"Storyline 5 - Ecoenergia at Ocua how does climate affect operations and "
+"management"
 msgstr ""
 
 #: templates/adaptation.html:85
