@@ -39,7 +39,7 @@ TIME_ZONE = 'America/Chicago'
 LANGUAGE_CODE = 'pt'
 
 LANGUAGES = (
-#    ('en', 'English'),
+    ('en', 'English'),
     ('pt', 'Portuguese'),
 )
 
@@ -114,6 +114,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'mozambique.translation.ForceDefaultLanguageMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
