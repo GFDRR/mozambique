@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-15 12:04-0500\n"
+"POT-Creation-Date: 2012-05-15 12:16-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -353,6 +353,10 @@ msgstr ""
 
 #: templates/vulnerability.html:12
 msgid "GFDRR Mozambique Country Profile"
+msgstr ""
+
+#: templates/vulnerability.html:21
+msgid "World Bank's Climate Change Knowledge Portal"
 msgstr ""
 
 #: templates/avatar/add.html:6 templates/profiles/edit_profile.html:7
