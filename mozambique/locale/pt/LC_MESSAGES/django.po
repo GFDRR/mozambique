@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-05-15 12:04-0500\n"
-"PO-Revision-Date: 2012-05-15 12:14\n"
+"PO-Revision-Date: 2012-05-15 12:15\n"
 "Last-Translator: Bruce Wayne <admin@admin.admin>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -247,17 +247,14 @@ msgid "for maps"
 msgstr "por mapas"
 
 #: templates/maps.html:45
-#, fuzzy
 msgid "All Maps"
 msgstr "Mapas"
 
 #: templates/maps.html:46
-#, fuzzy
 msgid "New Maps"
 msgstr "Novo mapa"
 
 #: templates/maps.html:52
-#, fuzzy
 msgid "Create Maps"
 msgstr "Mapas recentes"
 
@@ -270,7 +267,6 @@ msgstr ""
 "Adicionar camadas a partir deste GeoNode ou serviços remotos, e estilo eles."
 
 #: templates/maps.html:56
-#, fuzzy
 msgid "Create your own map"
 msgstr "Criar o seu próprio"
 
@@ -371,12 +367,10 @@ msgid "Disaster Loss Database"
 msgstr "Banco de Dados perda Desastre"
 
 #: templates/tools.html:72
-#, fuzzy
 msgid "Risk Calculator"
 msgstr "Calculadora Risiko"
 
 #: templates/tools.html:90
-#, fuzzy
 msgid "Click the <b>+</b> on any row to show map abstract."
 msgstr ""
 "Clique no <b> + </ b> em qualquer linha para mostrar camada metadados ou "
@@ -407,9 +401,8 @@ msgid "No abstract for this layer."
 msgstr "Não há resumo para esta camada"
 
 #: templates/maps/layer.html:162
-#, fuzzy
 msgid "Information"
-msgstr "Informação Suplementar"
+msgstr "Informação"
 
 #: templates/maps/layer.html:165
 msgid "Type"
@@ -661,7 +654,6 @@ msgid "Layers"
 msgstr "Camadas"
 
 #: templates/maps/mapinfo.html:67
-#, fuzzy
 msgid "This map uses the following layers"
 msgstr "Esta acção afecta os seguintes mapas"
 
@@ -670,12 +662,10 @@ msgid "View or edit this map"
 msgstr "Ver ou editar este mapa"
 
 #: templates/maps/mapinfo.html:85
-#, fuzzy
 msgid "Edit permissions"
 msgstr "Editar permissões"
 
 #: templates/maps/mapinfo.html:88
-#, fuzzy
 msgid "Delete map"
 msgstr "Dados seleccionados"
 
