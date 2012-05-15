@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-15 12:16-0500\n"
-"PO-Revision-Date: 2012-05-15 12:18\n"
+"POT-Creation-Date: 2012-05-15 12:22-0500\n"
+"PO-Revision-Date: 2012-05-15 12:23\n"
 "Last-Translator: Bruce Wayne <admin@admin.admin>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -273,6 +273,20 @@ msgstr "Criar o seu próprio"
 #: templates/resources.html:11
 msgid "UNDP Mozambique in GripWeb"
 msgstr "UNDP Moçambique em GripWeb"
+
+#: templates/resources.html:13
+msgid "Study on the Impact of Climate Change on Disaster Risk in Mozambique"
+msgstr ""
+"Estudo sobre o Impacto das Mudanças Climáticas sobre Riscos de Catástrofes "
+"em Moçambique"
+
+#: templates/resources.html:16
+msgid "Portuguese"
+msgstr "Português"
+
+#: templates/resources.html:19
+msgid "English"
+msgstr "Inglês"
 
 #: templates/search_base.html:4
 msgid "Search Data"
