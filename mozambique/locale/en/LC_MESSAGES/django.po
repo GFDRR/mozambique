@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-15 11:46-0500\n"
+"POT-Creation-Date: 2012-05-15 12:04-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -85,10 +85,9 @@ msgstr ""
 msgid ""
 "\n"
 "<p>\n"
-"Para visualizá-las, basta baixar e abrir, em seguida, clicando duas "
-"vezes sobre estes. Note que você deve ter o Google Earth instalado no seu "
-"computador.\n"
-"    </p>\n"
+"To view them, simply download and open the file, then double-click on it. "
+"Note that you must have Google Earth installed on your computer.\n"
+"</p>\n"
 msgstr ""
 
 #: templates/base.html:212
@@ -341,11 +340,11 @@ msgid "New map"
 msgstr ""
 
 #: templates/tools.html:70
-msgid "Banco de Dados perda Desastre"
+msgid "Disaster Loss Database"
 msgstr ""
 
 #: templates/tools.html:72
-msgid "Calculadora de Risco"
+msgid "Risk Calculator"
 msgstr ""
 
 #: templates/tools.html:90

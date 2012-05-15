@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-15 11:46-0500\n"
+"POT-Creation-Date: 2012-05-15 12:04-0500\n"
 "PO-Revision-Date: 2012-05-15 11:59\n"
 "Last-Translator: Bruce Wayne <admin@admin.admin>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,20 +30,34 @@ msgstr "Adaptação e Oportunidades"
 msgid ""
 "\n"
 "<p>\n"
-"Compiled a series of stories on the Google Earth platform to provide a starting point to begin the process of mapping the experiences of institutions and data on climate change and disaster risk management. These stories allow you to:\n"
-"<li> exploit the results of the work realizadosobre climate change under the INGC\n"
-"</ li> <li> understand the issues surrounding climate change on the basis of more recent evidence, including INGC Phase I study of the impacts of climate change in Mozambique.\n"
+"Compiled a series of stories on the Google Earth platform to provide a "
+"starting point to begin the process of mapping the experiences of "
+"institutions and data on climate change and disaster risk management. These "
+"stories allow you to:\n"
+"<li> exploit the results of the work realizadosobre climate change under the "
+"INGC\n"
+"</ li> <li> understand the issues surrounding climate change on the basis of "
+"more recent evidence, including INGC Phase I study of the impacts of climate "
+"change in Mozambique.\n"
 "</ li> </ ul> </ p> <p>\n"
-"The following stories are delivered digitally in KMZ format, viewable in its entirety, using the Google Earth platform.\n"
+"The following stories are delivered digitally in KMZ format, viewable in its "
+"entirety, using the Google Earth platform.\n"
 "</ p>\n"
 msgstr ""
 "\n"
 "    <p>\n"
-"    Compilamos uma série de histórias sobre a plataforma de Google Earth que fornecem um ponto de partida para iniciar o processo de mapeamento das experiências, das instituições e dados sobre as alterações climáticas e gestão de riscos de desastres.  Estas histórias permitem:\n"
-"<ul><li>explorar os resultados do trabalho realizadosobre as mudanças climáticas sob o INGC\n"
-"</li><li>compreender as questões que envolvem as mudanças climáticas na base de evidência mais recente, incluindo Fase INGC, eu estudo dos impactos das Mudanças Climáticas em Moçambique.\n"
+"    Compilamos uma série de histórias sobre a plataforma de Google Earth que "
+"fornecem um ponto de partida para iniciar o processo de mapeamento das "
+"experiências, das instituições e dados sobre as alterações climáticas e "
+"gestão de riscos de desastres.  Estas histórias permitem:\n"
+"<ul><li>explorar os resultados do trabalho realizadosobre as mudanças "
+"climáticas sob o INGC\n"
+"</li><li>compreender as questões que envolvem as mudanças climáticas na base "
+"de evidência mais recente, incluindo Fase INGC, eu estudo dos impactos das "
+"Mudanças Climáticas em Moçambique.\n"
 "</li></ul></p><p>\n"
-"As histórias seguintes são entregues digitalmente em formato KMZ, visível na sua totalidade, usando a plataforma Google Earth.\n"
+"As histórias seguintes são entregues digitalmente em formato KMZ, visível na "
+"sua totalidade, usando a plataforma Google Earth.\n"
 "</p>\n"
 
 #: templates/adaptation.html:33
@@ -65,8 +79,8 @@ msgstr "História 1 - Impactos das Mudanças Climáticas"
 
 #: templates/adaptation.html:51
 msgid ""
-"Storyline 2 - Lessons from the INGC Early Warning Experience - A Floods Case"
-" Study"
+"Storyline 2 - Lessons from the INGC Early Warning Experience - A Floods Case "
+"Study"
 msgstr ""
 "História 2 - Lições da Experiência Aviso INGC Precoce - estudo de caso "
 "Inundações"
@@ -91,8 +105,9 @@ msgstr ""
 msgid ""
 "\n"
 "<p>\n"
-"Para visualizá-las, basta baixar e abrir, em seguida, clicando duas vezes sobre estes. Note que você deve ter o Google Earth instalado no seu computador.\n"
-"    </p>\n"
+"To view them, simply download and open the file, then double-click on it. "
+"Note that you must have Google Earth installed on your computer.\n"
+"</p>\n"
 msgstr ""
 
 #: templates/base.html:212
@@ -185,8 +200,8 @@ msgstr "Ferramentas e Mapas"
 
 #: templates/index.html:66
 msgid ""
-"For citizens and decision makers to learn more about climate change and it's"
-" impacts."
+"For citizens and decision makers to learn more about climate change and it's "
+"impacts."
 msgstr ""
 "Para os cidadãos e tomadores de decisão saberem mais sobre as mudanças "
 "climáticas e os seus impactos."
@@ -318,8 +333,7 @@ msgid "Selected Data"
 msgstr "Dados seleccionados"
 
 #: templates/search_base.html:86
-msgid ""
-"Use the checkboxes in the search results to add data to your selection."
+msgid "Use the checkboxes in the search results to add data to your selection."
 msgstr ""
 "Utilize as caixas de verificação nos resultados da pesquisa para adicionar "
 "dados à sua selecção"
@@ -365,12 +379,13 @@ msgid "New map"
 msgstr "Novo mapa"
 
 #: templates/tools.html:70
-msgid "Banco de Dados perda Desastre"
+msgid "Disaster Loss Database"
 msgstr ""
 
 #: templates/tools.html:72
-msgid "Calculadora de Risco"
-msgstr ""
+#, fuzzy
+msgid "Risk Calculator"
+msgstr "Calculadora Risiko"
 
 #: templates/tools.html:90
 #, fuzzy
@@ -493,8 +508,8 @@ msgid ""
 "Below are links to download the raw data and metadata for this layer. The "
 "most used download format is colored in blue."
 msgstr ""
-"Abaixo estão as ligações para baixar os dados em bruto ​​e metadados para "
-"esta camada. O formato mais utilizadas de descarregamento é colorido a azul."
+"Abaixo estão as ligações para baixar os dados em bruto ​​e metadados para esta "
+"camada. O formato mais utilizadas de descarregamento é colorido a azul."
 
 #: templates/maps/layer.html:248
 msgid "Metadata"
@@ -579,13 +594,19 @@ msgstr "Este formulario permite-lhe actualizar os dados para esta camada."
 #: templates/maps/layer_replace.html:43
 msgid ""
 "\n"
-"If the new dataset omits attributes that were included in the previous version,\n"
+"If the new dataset omits attributes that were included in the previous "
+"version,\n"
 "or changes their types, then existing styles for the layer may not work.\n"
-"Please check your maps if the new data includes such changes.  Additionally,\n"
+"Please check your maps if the new data includes such changes.  "
+"Additionally,\n"
 "updated data must be the same format as the data already in place, e.g.\n"
 msgstr ""
 "\n"
-"Se o novo conjunto de dados omitir atributos que foram incluídos na versão anterior ou mudar os seus tipos, então os estilos existentes para a camada poderão não funcionar. Por favor verifique nos seus mapas se os novos dados incluem tais mudanças. Adicionalmente, os dados carregados devem ser do mesmo formato que os dados já carregados, p.e.\n"
+"Se o novo conjunto de dados omitir atributos que foram incluídos na versão "
+"anterior ou mudar os seus tipos, então os estilos existentes para a camada "
+"poderão não funcionar. Por favor verifique nos seus mapas se os novos dados "
+"incluem tais mudanças. Adicionalmente, os dados carregados devem ser do "
+"mesmo formato que os dados já carregados, p.e.\n"
 
 #: templates/maps/layer_replace.html:51
 msgid "Select a layer data file and submit the form to begin the transfer."
