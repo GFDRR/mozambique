@@ -72,7 +72,9 @@ Ext.onReady(function(){
 {% block sidebar %}
 <div class="well">
   <div id="refine" class="block">
-    <h3>{% trans "Refine Search" %}</h3>
+    <h2>{% trans "Add data" %}</h2>
+    <a class="btn primary" href="{% url data_upload %}">Upload</a>
+    <h2>{% trans "Refine Search" %}</h2>
     <div class="bbox-controls">
       <div class="bbox-enabled"><input type="checkbox" /> {% trans "By area" %}</div>
       <p><span class="explain">{% blocktrans %}Limit the search to data that includes features in the displayed area.{% endblocktrans %}</span></p>
@@ -82,7 +84,7 @@ Ext.onReady(function(){
     <div class="search-button">Refine</div>
   </div>
   <div class="block">
-  <h3>{% trans "Selected Data" %}</h3>
+  <h2>{% trans "Selected Data" %}</h2>
     <p><span class="explain">{% blocktrans %}Use the checkboxes in the search results to add data to your selection.{% endblocktrans%}</span></p>
   <div id="selection">
     <div id="data_cart"></div>

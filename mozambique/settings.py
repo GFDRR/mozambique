@@ -82,9 +82,6 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static_root')
 STATIC_URL = '/static/'
 GEONODE_UPLOAD_PATH = MEDIA_ROOT + 'geonode'
 GEONODE_CLIENT_LOCATION = STATIC_URL + 'geonode/'
-ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
-
-STATICFILES_STORAGE = 'staticfiles.storage.StaticFilesStorage'
 
 # Additional directories which hold static files
 STATICFILES_DIRS = [
@@ -183,11 +180,6 @@ MAP_BASELAYERS = [{
     "fixed": True,
     "group":"background"
   },{
-    "source": { "ptype": "gxp_stamensource"},
-    "name": "toner",
-    "group": "background",
-    "visibility": False
-  },{
     "source": { "ptype":"gxp_mapquestsource"},
     "name":"osm",
     "group":"background",
@@ -200,6 +192,14 @@ MAP_BASELAYERS = [{
   },{
     "source": {"ptype": "gxp_mapboxsource"},
   },{
+"source": {
+           "ptype":"gxp_bingsource",
+          },
+"group":"background",
+"name":"Aerial",
+"visibility": False,
+"fixed": True,
+},{
     "source": {"ptype":"gx_olsource"},
     "type":"OpenLayers.Layer.WMS",
     "group":"background",

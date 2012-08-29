@@ -7,95 +7,108 @@
 {{ block.super }}
 <style>
 
+#main {
+padding: 0;
+top: -52px;
+}
+
+.data {
+  background-image: url({{ STATIC_URL }}icons/data.svg); 
+}
+
+.tools {
+  background-image: url({{ STATIC_URL }}icons/tools.svg); 
+}
+
+.adaptation {
+  background-image: url({{ STATIC_URL }}icons/adaptation.svg); 
+}
+
+.vulnerability {
+  background-image: url({{ STATIC_URL }}icons/vulnerability.svg); 
+}
+
 .niceblock{
-  height: 250px;
-  margin-top: 20px;
+  height: 220px;
+  margin-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
-/*  background: url({{ STATIC_URL }}/theme/wash-white-30.png) transparent; */
-  background: white;
-  border: 1px solid gray;
-  color: gray;
- 
+  background-repeat: no-repeat;
+  background-position:right bottom;
+  background-color: white;
+  font-size: 18px;
 }
+
+.niceblock p {
+  font-size: 18px;
+  line-height: normal;
+  color: gray;
+}
+
+.niceblock:hover {
+  background-color: #ffe;
+}
+
 .niceblock h2{
-  margin-top: 20px;
   margin-bottom: 10px;
   font-size: 36px;
-  color: black;
+  color: #048149;
   font-weight: normal;
 }
 
-.niceblock li {
-  color: gray;
+
+.niceblock h2 > a{
+  color: #048149;
+  text-decoration: none;
 }
 
-.container {
-  width: 1020px;
+
+.niceblock li {
+  color: gray;
 }
 
 </style>
 {% endblock %}
 
 {% block main %}
-<div id="main" class="container">
-    <header class="jumbotron masthead" id="overview">
-      <div class="inner">
-        <div class="container">
+<div id="main" class="container-fluid">
+
           <div class="row">
-            <div class="span5 niceblock">
-               <h2>{% trans "Impacts and Vulnerability" %}</h2>
-               <p>{% trans "Quickly explore climate projections, impacts and vulnerability information for your area" %}</p>
-               <p><a class="btn pull-right" href="{% url vulnerability %}">{% trans "Learn more" %} &raquo;</a></p>
+            <div class="span5 offset3 well niceblock vulnerability">
+               <h2><a href="{% url vulnerability %}">{% trans "Vulnerability" %}</a></h2>
+               <p>{% trans "Quickly explore climate projections, impacts and vulnerability information for your area" %}.</p>
+               <p><a class="btn" href="{% url vulnerability %}">{% trans "Learn more" %} &raquo;</a></p>
             </div>
-            <div class="span5 niceblock">
-               <h2>{% trans "Adaptation and Opportunities" %}</h2>
-               <p>{% trans "Learn and explore options to adapt to climate change" %}</p>
-               <p><a class="btn pull-right" href="{% url adaptation %}">{% trans "Learn more" %} &raquo;</a></p>
+            <div class="span5 well niceblock adaptation">
+               <h2><a href="{% url adaptation %}">{% trans "Adaptation" %}</a></h2>
+               <p>{% trans "Learn and explore options to adapt to climate change" %}.</p>
+               <p><a class="btn" href="{% url adaptation %}">{% trans "Learn more" %} &raquo;</a></p>
             </div>
-            <div class="span5 niceblock">
-               <h2>{% trans "Resources" %}</h2>
-               <p>{% trans "Information, Articles and Links" %}</p>
-               <p><a class="btn pull-right" href="{% url resources %}">{% trans "View details" %} &raquo;</a></p>
-            </div>
- 
          </div>
           <div class="row">
-            <div class="span5 niceblock">
-               <h2>{% trans "Tools and Maps" %}</h2>
+            <div class="span5 offset3 well niceblock tools">
+               <h2><a href="{% url tools %}">{% trans "Tools" %}</a></h2>
                <p>{% trans "For citizens and decision makers to learn more about climate change and it's impacts." %}</p>
                <ul>
                 <li>{% trans "Interactive maps" %}</li>
                 <li>{% trans "Simulations" %}</li>
                </ul>
-               <p><a class="btn pull-right" href="{% url tools %}">{% trans "View interactive simulations" %} &raquo;</a></p>
+               <p><a class="btn" href="{% url tools %}">{% trans "View interactive simulations" %} &raquo;</a></p>
             </div>
  
-             <div class="span5 niceblock">
-               <h2>{% trans "Raw Data" %}</h2>
-                <p>{% trans "Find and download the raw data used in many of the country's research initiatives." %}</p>
+             <div class="span5 niceblock well data">
+               <h2><a href="{% url data_search %}">{% trans "Data" %}</a></h2>
                 <p>
     <form action="{% url data_search %}" method="POST">
       {% csrf_token %}
        <input class="span3" type="text" id="search_query" name="q" />
-       <button class="span2 btn small primary pull-right" type="submit" id="submit_search">{% trans "Search" %}</button>
+       <button class="btn small primary" type="submit" id="submit_search">{% trans "Search" %}</button>
     </form>
-               </p>
-	       <p><a class="btn pull-right" href="{% url data_search %}">{% trans "View all layers" %} &raquo;</a></p>
-            </div>
-           <div class="span5 niceblock">
-               <h2>{% trans "About" %}</h2>
-              <img src="{{ STATIC_URL }}/theme/ingc-logo.jpeg"/>
-               <ul>
-                 <li>{% trans "Who are we?" %}</li>
-                 <li>{% trans "What do we do?" %}</li>
-                 <li>{% trans "FAQ" %}</li>
-               </ul>
-               <p><a class="btn pull-right" href="{% url about %}">{% trans "Learn more" %} &raquo;</a></p>
-            </div>
-          </div>
-        </div><!-- /container -->
+                <p>{% trans "Find and download the raw data used in many of the country's research initiatives." %}</p>
+	       <a class="btn" href="{% url data_search %}">{% trans "View all layers" %}&raquo;</a>
       </div>
-    </header>
-</div>
+   </div>
+ </div>
 {% endblock %}
+
+
