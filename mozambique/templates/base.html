@@ -233,6 +233,15 @@ table th, table td {
 .topbar a {
 color: white;
 }
+
+.ingc {
+  background-color: white;
+  padding: 4px 10px 4px 10px;
+  margin-right: 10px;
+  margin-left: -20px;
+  right: 0px;
+}
+
 </style>
  {% endblock %}
 </head>
@@ -242,7 +251,9 @@ color: white;
 <div class="topbar">
   <div class="topbar-inner">
     <div class="container-fluid">
+                    <img height="80%" class="ingc pull-left" src="{{ STATIC_URL }}/theme/ingc.png"/>
       <a class="brand" href="{% url home %}">
+
             {% trans "moz-adapt" %}</a>
       <ul class="nav">
         <li><a id="nav-vulnerability" href="{% url vulnerability %}">{% trans "Vulnerability" %}</a></li>
@@ -318,11 +329,6 @@ color: white;
 <!-- FOOTER -->
 <footer class="footer">
 {% block footer %}
-          <div class="row banner well">
-            <div class="span4 offset7">
-                    <img src="{{ STATIC_URL }}/theme/ingc.png"/>
-            </div>
-          </div>
 {% endblock %}
 </footer>
 <!-- END FOOTER -->

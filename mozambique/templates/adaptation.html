@@ -16,13 +16,9 @@ table td{
 </style>
 {% endblock %}
 
-{% block main %}
-<div id="main" class="container">
+{% block sidebar %}
   <div class="well">
-    <h1>{% trans "Adaptation and Opportunities" %}</h1>
-    <p>{% trans "Learn and explore options to adapt to climate change" %}</p>
-  </div>
-  <div class="well">
+  <h2>{% trans "About" %} {% trans "Storylines" %}</h2>
 {% blocktrans %}
 <p>
 Compiled a series of stories on the Google Earth platform to provide a starting point to begin the process of mapping the experiences of institutions and data on climate change and disaster risk management. These stories allow you to:
@@ -33,64 +29,75 @@ The following stories are delivered digitally in KMZ format, viewable in its ent
 </ p>
 {% endblocktrans %}
 
-  <h2>{% trans "Storylines" %}</h2>
-  <table class="table table-bordered table-striped" id="download-table">
-  <thead>
-      <tr>
-        <th>{% trans "Name" %}</th>
-        <th>{% trans "Download" %}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>{% trans "Storyline 1 - Impacts of Climate Change" %}</td>
-        <td>
-          <a href="{{ STATIC_URL }}kmz/Storyline 1 Impacts of Climate Change.kmz">
-            <img src="{{ STATIC_URL }}kmz/kmz.png" width="32px" />
-         </a>
-</td>
-      </tr>
-     <tr>
-        <td>{% trans "Storyline 2 - Lessons from the INGC Early Warning Experience - A Floods Case Study" %}</td>
-        <td>
-          <a href="{{ STATIC_URL }}kmz/Storyline 2 Lessons from the INGC Early Warning Experience - A Floods Case Study.kmz">
-            <img src="{{ STATIC_URL }}kmz/kmz.png" width="32px" />
-         </a>
-</td>
-      </tr>
-  <tr>
-        <td>{% trans "Storyline 3 - Information Management During Emergency Response" %}</td>
-        <td>
-          <a href="{{ STATIC_URL }}kmz/Storyline 3 Information Management During Emergency Response.kmz">
-            <img src="{{ STATIC_URL }}kmz/kmz.png" width="32px" />
-         </a>
-</td>
-      </tr>
-  <tr>
-        <td>{% trans "Storyline 4 - Building Resilience to Climate Change" %}</td>
-        <td>
-          <a href="{{ STATIC_URL }}kmz/Storyline 4 Building Resilience to Climate Change.kmz">
-            <img src="{{ STATIC_URL }}kmz/kmz.png" width="32px" />
-         </a>
-</td>
-      </tr>
-  <tr>
-        <td>{% trans "Storyline 5 - Ecoenergia at Ocua how does climate affect operations and management" %}</td>
-        <td>
-          <a href="{{ STATIC_URL }}kmz/Storyline 5 Ecoenergia at Ocua how does climate affect operations and management.kmz">
-            <img src="{{ STATIC_URL }}kmz/kmz.png" width="32px" />
-         </a>
-</td>
-      </tr>
- 
-    </tbody>
-  </table>
 {% blocktrans %}
 <p>
 To view them, simply download and open the file, then double-click on it. Note that you must have Google Earth installed on your computer.
 </p>
 {% endblocktrans %}
+
+</div>
+
+{% endblock %}
+
+{% block content %}
+  <div class="well">
+    <h1>{% trans "Adaptation and Opportunities" %}</h1>
+    <p>{% trans "Learn and explore options to adapt to climate change" %}</p>
   </div>
+
+  <div >
+  <div class="row">
+  <div class="well span6">
+    <a href="{{ STATIC_URL }}kmz/Storyline 1 Impacts of Climate Change.kmz">
+     <img src="{{ STATIC_URL }}kmz/1.png" width="340px" alt="storyline 1" /> 
+     <h3>{% trans "Storyline 1 - Impacts of Climate Change" %}
+         <img src="{{ STATIC_URL }}kmz/kmz.png" width="32px" />
+      </h3>
+    </a>
+  </div>
+  <div class="well span6">
+     <a href="{{ STATIC_URL }}kmz/Storyline 2 Lessons from the INGC Early Warning Experience - A Floods Case Study.kmz">
+     <img src="{{ STATIC_URL }}kmz/2.png" width="340px" alt="storyline 2" /> 
+     <h3>
+        {% trans "Storyline 2 - Lessons from the INGC Early Warning Experience - A Floods Case Study" %}
+         <img src="{{ STATIC_URL }}kmz/kmz.png" width="32px" />
+      </h3>
+    </a>
+  </div>
+  </div>
+  <div class="row">
+  <div class="well span6">
+     <a href="{{ STATIC_URL }}kmz/Storyline 3 Information Management During Emergency Response.kmz">
+     <img src="{{ STATIC_URL }}kmz/3.png" width="340px" alt="storyline 3" /> 
+     <h3>
+        {% trans "Storyline 3 - Information Management During Emergency Response" %}
+         <img src="{{ STATIC_URL }}kmz/kmz.png" width="32px" />
+      </h3>
+    </a>
+  </div>
+  <div class="well span6">
+    <a href="{{ STATIC_URL }}kmz/Storyline 4 Building Resilience to Climate Change.kmz">
+     <img src="{{ STATIC_URL }}kmz/4.png" width="340px" alt="storyline 4" /> 
+     <h3>
+        {% trans "Storyline 4 - Building Resilience to Climate Change" %}
+         <img src="{{ STATIC_URL }}kmz/kmz.png" width="32px" />
+      </h3>
+    </a>
+  </div>
+  </div>
+
+  <div class="row">
+  <div class="span6">
+     <a href="{{ STATIC_URL }}kmz/Storyline 5 Ecoenergia at Ocua how does climate affect operations and management.kmz">
+     <img src="{{ STATIC_URL }}kmz/5.png" width="340px" alt="storyline 5" /> 
+     <h3>
+        {% trans "Storyline 5 - Ecoenergia at Ocua how does climate affect operations and management" %}
+         <img src="{{ STATIC_URL }}kmz/kmz.png" width="32px" />
+      </h3>
+    </a>
+  </div>
+  </div>
+
 </div>
 
 {% endblock %}
