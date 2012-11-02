@@ -70,11 +70,25 @@ top: -52px;
 </style>
 {% endblock %}
 
-{% block main %}
-<div id="main" class="container-fluid">
+{% block sidebar %}
+<div class="well" style="opacity: 0.6">
+<h4>{% trans "About" %} moz-adapt.org</h4>
+
+{% blocktrans %}
+<p>The purpose of moz-adapt.org is to provide tools and data in order to better understand and prepare for Climate Change in the country of Mozambique with an enfasis on reducing disasters caused by natural hazards.</p>
+<p>This site has been developed by and for INGC, with support from The World Bank, The Global Facility for Disaster Reduction and Recovery</p>
+{% endblocktrans %}
+
+<ul>
+<li><a href="{% url terms %}">{% trans "Terms of Use" %}</a></li>
+</ul>
+</div>
+{% endblock %}
+
+{% block content %}
 
           <div class="row">
-            <div class="span5 offset3 well niceblock vulnerability">
+            <div class="span5 offset1 well niceblock vulnerability">
                <h2><a href="{% url vulnerability %}">{% trans "Vulnerability" %}</a></h2>
                <p>{% trans "Quickly explore climate projections, impacts and vulnerability information for your area" %}.</p>
                <p><a class="btn" href="{% url vulnerability %}">{% trans "Learn more" %} &raquo;</a></p>
@@ -86,7 +100,7 @@ top: -52px;
             </div>
          </div>
           <div class="row">
-            <div class="span5 offset3 well niceblock tools">
+            <div class="span5 offset1 well niceblock tools">
                <h2><a href="{% url tools %}">{% trans "Tools" %}</a></h2>
                <p>{% trans "For citizens and decision makers to learn more about climate change and it's impacts." %}</p>
                <ul>

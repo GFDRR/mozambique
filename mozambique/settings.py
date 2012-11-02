@@ -223,6 +223,8 @@ MAP_BASELAYERS = [{
 USE_UPLOADER=True
 
 INSTALLED_APPS = (
+
+    # Apps bundled with Django
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -232,20 +234,22 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.messages',
 
+    # Third party apps
     'django_extensions',
     'registration',
     'profiles',
     'avatar',
     'dialogos',
     'agon_ratings',
+    'taggit',
     'south',
 
+    # GeoNode internal apps
     'geonode.core',
     'geonode.maps',
     'geonode.proxy',
-    'geonode',
 
-    'impact',
+    # mozambique apps
     'flatblocks',
     'rosetta',
     'modeltranslation',
@@ -277,6 +281,9 @@ DB_DATASTORE_PASSWORD = ''
 DB_DATASTORE_HOST = ''
 DB_DATASTORE_PORT = ''
 DB_DATASTORE_TYPE=''
+
+ROSETTA_MESSAGES_PER_PAGE=1000
+
 
 try:
     from local_settings import *

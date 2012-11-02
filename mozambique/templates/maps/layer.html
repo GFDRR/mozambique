@@ -302,8 +302,7 @@ width: 100px;
         <h3> {% trans "Manage" %} </h3>
 			{% if user.is_authenticated %}
         {% if can_change %}
-                <a class="btn managebtn primary" href="?describe">{% trans "Edit metadata" %}</a>
-            	<a class="btn managebtn" href="?update">{% trans "Replace raw data" %}</a>
+                <a class="btn managebtn primary" href="{% url data_metadata layer.typename %}">{% trans "Edit metadata" %}</a>
         {% endif %}
         {% if can_change_permissions %}
         <a class="managebtn btn" href="{% url edit_layer_permissions layer.typename %}">{% trans "Edit Permissions" %}</a>

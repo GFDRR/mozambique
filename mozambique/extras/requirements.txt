@@ -1,4 +1,3 @@
 django-flatblocks
 django-rosetta
 django-modeltranslation
--e git+git://github.com/AIFDR/riab.git#egg=riab

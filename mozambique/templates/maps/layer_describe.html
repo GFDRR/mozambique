@@ -10,7 +10,7 @@
 {% block content %}
 <div class="well">
   <h2> {% trans "Editing details for " %} {{ layer.typename }} </h2>
-  <form action="/data/{{layer.typename}}?describe" method="POST">
+  <form action="{% url data_metadata layer.typename %}" method="POST">
 	  {% csrf_token %}
 	      {{ layer_form.as_p }}
           <fieldset id="poc_form" {% if poc_form.hidden %}style="display:none"{% endif %}>

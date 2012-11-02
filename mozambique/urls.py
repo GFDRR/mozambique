@@ -32,6 +32,11 @@ urlpatterns = patterns('',
                 {'template': 'help.html'}, name='help'),
     url(r'^developer/$', 'django.views.generic.simple.direct_to_template',
                 {'template': 'developer.html'}, name='dev'),
+    url(r'^terms/$', 'django.views.generic.simple.direct_to_template',
+                {'template': 'terms.html'}, name='terms'),
+    url(r'^about/$', 'django.views.generic.simple.direct_to_template',
+                {'template': 'about.html'}, name='about'),
+
 
     # Data views
     (r'^data/', include(geonode.maps.urls.datapatterns)),
@@ -73,7 +78,6 @@ urlpatterns = patterns('',
     url(r'^tools$', 'django.views.generic.list_detail.object_list',
                    {'queryset': maps_queryset, 'template_name': 'tools.html'},
                    name='tools'),
-    url('^impact/', include('impact.urls')),
 
     )
 

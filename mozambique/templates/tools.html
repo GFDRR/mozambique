@@ -40,6 +40,11 @@ Ext.onReady(function(){
 {%endblock%}
 {% block sidebar %}
 <div class="well">
+<h2>{% trans "Create your own" %}</h2>
+</p>
+<a class="btn large primary" href="/maps/new">{% trans "New map" %}</a>
+
+
 <h2>{% trans "Latest Maps" %}</h2>
 <ol>
 {% for object in object_list %}
@@ -49,15 +54,12 @@ Ext.onReady(function(){
     <a href="{{ object.get_absolute_url }}/view">
       <img class="thumbnail" src="{{ STATIC_URL }}/theme/img/mapscreens/{{object.id}}.png" width="200" alt="">
     </a>
+    <a class="btn" href="{% url maps_download object.id %}">{% trans "Download" %}</a>
 </li>
 {% empty %}
 <p>{% trans "No maps have been created." %} {% trans "Why not" %}<a href="/maps/new">{% trans "create one?" %}</a>.</p>
 {% endfor %}
 </ol>
-<h2>{% trans "Create your own" %}</h2>
-<p>{% trans "You can use the interactive tools to create your own map focused on a topic or a location." %}
-<a class="btn large primary" href="/maps/new">{% trans "New map" %}</a></p>
-
 </div>
 {% endblock %}
 {% block content %}
@@ -65,22 +67,45 @@ Ext.onReady(function(){
   <div class="well">
     <h1>{% trans "Tools and Maps" %}</h1>
   </div>
- <div id="grid" class="well">
-<div class="row">
-<div class="span6"><h4>{% trans "Disaster Loss Database"%}</h4>
-</div>
-<div class="span6"><h4>{% trans "Risk Calculator" %}</h4>
-</div>
-</div>
-  <ul class="media-grid">
-   <li id="droughtmap">
-    <a href="http://62.2.195.177/DesInventar/"><img style="border:5px #404040 solid;" src="{{ STATIC_URL }}/theme/img/gripscreen.png" height='230' alt=""></a>
+ <div class="row">
 
-</li>
- <li id="droughtmap">
-<a href="/impact"><img src="{{ STATIC_URL }}/theme/img/risk.png" height='230' style="border:5px #404040 solid;align:center;"></a>
-</li>
-  </ul>
+
+   <div class="span6 well" id="droughtmap">
+    <h3>{% trans "Create your own interactive map" %}</h3>
+    <a href="/maps/new"><img src="{{ STATIC_URL }}/theme/img/risk.png" style="border:5px #404040 solid;align:center;"></a>
+
+<p>{% trans "You can use the interactive tools to create your own map focused on a topic or a location." %}
+   </div>
+
+   <div class="span6 well" id="droughtmap">
+    <h3>{% trans "Zambezi Decision Support System for Climate Change" %}</h3>
+    <a href="http://zdss.ingc.gov.mz/"><img src="{{ STATIC_URL }}/theme/img/zdss.png" style="border:5px #404040 solid;align:center;"></a>
+    <p>{% trans "A web-based Decision Support System to analyze the impact of climate change and water resources development on runoff in the Zambezi basin." %}</p>
+   </div>
+
+
+   <div class="span6 well" id="droughtmap">
+    <h3>{% trans "GRIPWeb Disaster Loss Database for Mozambique"%}</h3>
+    <a href="http://62.2.195.177/DesInventar/"><img style="border:5px #404040 solid;" src="{{ STATIC_URL }}/theme/img/gripscreen.png" alt=""></a>
+    <p>{% trans "GRIPWeb provides an innovative tool for information and knowledge management, it also aims at empowering people by introducing new ways of working and collaborating." %}</p>
+   </div>
+
+   <div class="span6 well">
+    <h3>{% trans "World Bank's Climate Change Knowledge Portal" %}</h3>
+    <a id="nav-vulnerability" href="http://sdwebx.worldbank.org/climateportal/index.cfm?page=country_historical_climate&ThisRegion=Africa&ThisCCode=MOZ">
+<img style="border:5px #404040 solid;" src="{{ STATIC_URL }}theme/img/cckp.png" width=330px /></a>
+    <p>{% trans "The Climate Change Knowledge Portal (CCKP) is a central hub of information, data and reports about climate change around the world. Here you can query, map, compare, chart and summarize key climate and climate-related information" %}</p>
+   </div>
+
+<!-- Add uGRID from UNEP and data.worldbank.org
+http://preview.grid.unep.ch
+
+-->
+   </div>
+
+ </div>
+
+<div class="well">
   <div id="search_form" class="block">
     <div class="block">
     <h2>{% trans "Search" %} <span class="subtitle">{% trans "for maps" %}</span></h2>
@@ -95,4 +120,8 @@ Ext.onReady(function(){
 
  </div>
 </div>
+{% endblock %}
+
+{% block footer %}
+This is the footer
 {% endblock %}

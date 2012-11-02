@@ -2,234 +2,246 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-15 12:22-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2012-09-12 11:06-0500\n"
+"PO-Revision-Date: 2012-11-02 04:21\n"
+"Last-Translator: Jose Rafael <joseerrafael@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: \n"
+"X-Translated-Using: django-rosetta 0.6.8\n"
 
-#: templates/about.html:8 templates/base.html:220 templates/index.html:87
+#: templates/401.html:10
+msgid "Not Permitted"
+msgstr ""
+
+#: templates/401.html:17
+msgid ""
+"\n"
+"          You are not allowed to perform this operation.  \n"
+"      "
+msgstr ""
+
+#: templates/401.html:24
+msgid "Please verify that you are logged in as the correct user."
+msgstr ""
+
+#: templates/401.html:26
+msgid "Please login or register and retry."
+msgstr ""
+
+#: templates/404.html:6
+msgid "Page Not Found"
+msgstr ""
+
+#: templates/404.html:7
+msgid ""
+"\n"
+"        The page you requested does not exist.  Perhaps you are using an outdated bookmark?\n"
+"    "
+msgstr ""
+
+#: templates/500.html:257 templates/base.html:257
+msgid "moz-adapt"
+msgstr ""
+
+#: templates/500.html:259 templates/base.html:259 templates/index.html:92
+msgid "Vulnerability"
+msgstr ""
+
+#: templates/500.html:260 templates/base.html:260 templates/index.html:97
+msgid "Adaptation"
+msgstr ""
+
+#: templates/500.html:261 templates/base.html:261 templates/index.html:114
+msgid "Data"
+msgstr ""
+
+#: templates/500.html:262 templates/base.html:262 templates/index.html:104
+msgid "Tools"
+msgstr ""
+
+#: templates/500.html:289
+msgid "Internal Server Error"
+msgstr ""
+
+#: templates/500.html:290
+msgid ""
+"\n"
+"        An internal error occurred. Please try again, and if the problem continues, contact your site administrator.\n"
+"    "
+msgstr ""
+
+#: templates/about.html:8 templates/adaptation.html:21
 msgid "About"
 msgstr ""
 
-#: templates/adaptation.html:22 templates/index.html:52
-msgid "Adaptation and Opportunities"
-msgstr ""
-
-#: templates/adaptation.html:23
-msgid ""
-"\n"
-"<p>\n"
-"Compiled a series of stories on the Google Earth platform to provide a "
-"starting point to begin the process of mapping the experiences of "
-"institutions and data on climate change and disaster risk management. These "
-"stories allow you to:\n"
-"<li> exploit the results of the work realizadosobre climate change under the "
-"INGC\n"
-"</ li> <li> understand the issues surrounding climate change on the basis of "
-"more recent evidence, including INGC Phase I study of the impacts of climate "
-"change in Mozambique.\n"
-"</ li> </ ul> </ p> <p>\n"
-"The following stories are delivered digitally in KMZ format, viewable in its "
-"entirety, using the Google Earth platform.\n"
-"</ p>\n"
-msgstr ""
-
-#: templates/adaptation.html:33
+#: templates/adaptation.html:21
 msgid "Storylines"
 msgstr ""
 
-#: templates/adaptation.html:37 templates/maps/layer.html:190
-msgid "Name"
+#: templates/adaptation.html:22
+msgid ""
+"\n"
+"<p>\n"
+"Compiled a series of stories on the Google Earth platform to provide a starting point to begin the process of mapping the experiences of institutions and data on climate change and disaster risk management. These stories allow you to:\n"
+"<li> exploit the results of the work realizadosobre climate change under the INGC\n"
+"</ li> <li> understand the issues surrounding climate change on the basis of more recent evidence, including INGC Phase I study of the impacts of climate change in Mozambique.\n"
+"</ li> </ ul> </ p> <p>\n"
+"The following stories are delivered digitally in KMZ format, viewable in its entirety, using the Google Earth platform.\n"
+"</ p>\n"
+msgstr ""
+"\n"
+"<p>\n"
+"We have compiled a series of stories on the Google Earth platform to provide a starting point to begin the process of mapping the experiences of institutions and data on climate change and disaster risk management. These stories allow you to:\n"
+"<li> exploit the results of the work conducted to address climate change under the INGC\n"
+"</ li> <li> understand the issues surrounding climate change on the basis of more recent evidence, including INGC Phase I study of the impacts of climate change in Mozambique.\n"
+"</ li> </ ul> </ p> <p>\n"
+"The following stories are delivered digitally in KMZ format, viewable in its entirety, using the Google Earth platform.\n"
+"</ p>\n"
+
+#: templates/adaptation.html:32
+msgid ""
+"\n"
+"<p>\n"
+"To view them, simply download and open the file, then double-click on it. Note that you must have Google Earth installed on your computer.\n"
+"</p>\n"
 msgstr ""
 
-#: templates/adaptation.html:38 templates/maps/layer.html:240
-#: templates/maps/mapinfo.html:64
-msgid "Download"
+#: templates/adaptation.html:44
+msgid "Adaptation and Opportunities"
 msgstr ""
 
-#: templates/adaptation.html:43
+#: templates/adaptation.html:45 templates/index.html:98
+msgid "Learn and explore options to adapt to climate change"
+msgstr ""
+
+#: templates/adaptation.html:53
 msgid "Storyline 1 - Impacts of Climate Change"
 msgstr ""
 
-#: templates/adaptation.html:51
+#: templates/adaptation.html:62
 msgid ""
-"Storyline 2 - Lessons from the INGC Early Warning Experience - A Floods Case "
-"Study"
+"Storyline 2 - Lessons from the INGC Early Warning Experience - A Floods Case"
+" Study"
 msgstr ""
 
-#: templates/adaptation.html:59
+#: templates/adaptation.html:73
 msgid "Storyline 3 - Information Management During Emergency Response"
 msgstr ""
 
-#: templates/adaptation.html:67
+#: templates/adaptation.html:82
 msgid "Storyline 4 - Building Resilience to Climate Change"
 msgstr ""
 
-#: templates/adaptation.html:75
+#: templates/adaptation.html:94
 msgid ""
 "Storyline 5 - Ecoenergia at Ocua how does climate affect operations and "
 "management"
 msgstr ""
 
-#: templates/adaptation.html:85
-msgid ""
-"\n"
-"<p>\n"
-"To view them, simply download and open the file, then double-click on it. "
-"Note that you must have Google Earth installed on your computer.\n"
-"</p>\n"
-msgstr ""
-
-#: templates/base.html:212
-msgid "moz-adapt"
-msgstr ""
-
-#: templates/base.html:214
-msgid "Vulnerability"
-msgstr ""
-
-#: templates/base.html:215
-msgid "Adaptation"
-msgstr ""
-
-#: templates/base.html:216 templates/index.html:57 templates/resources.html:9
-msgid "Resources"
-msgstr ""
-
-#: templates/base.html:217 templates/maps/layer.html:242
-msgid "Data"
-msgstr ""
-
-#: templates/base.html:218
-msgid "Tools"
-msgstr ""
-
-#: templates/base.html:246
+#: templates/base.html:289
 msgid "Upload data"
 msgstr ""
 
-#: templates/base.html:247
+#: templates/base.html:290
 msgid "Translate site"
 msgstr ""
 
-#: templates/base.html:248
+#: templates/base.html:291
 msgid "Admin site"
 msgstr ""
 
-#: templates/base.html:251
+#: templates/base.html:294
 msgid "Change password"
 msgstr ""
 
-#: templates/base.html:252
+#: templates/base.html:295
 msgid "Log out"
 msgstr ""
 
-#: templates/base.html:261
+#: templates/base.html:304
 msgid "Username"
 msgstr ""
 
-#: templates/base.html:262
+#: templates/base.html:305
 msgid "Password"
 msgstr ""
 
-#: templates/base.html:264
+#: templates/base.html:307
 msgid "Sign in"
 msgstr ""
 
-#: templates/index.html:47 templates/vulnerability.html:11
-msgid "Impacts and Vulnerability"
+#: templates/index.html:75
+msgid "About moz-adapt.org"
 msgstr ""
 
-#: templates/index.html:48
+#: templates/index.html:77
+msgid ""
+"\n"
+"<p>The purpose of moz-adapt.org is to provide tools and data in order to better understand and prepare for Climate Change in the country of Mozambique with an enfasis on reducing disasters caused by natural hazards.</p>\n"
+"<p>This site has been developed by and for INGC, with support from The World Bank, The Global Facility for Disaster Reduction and Recovery and ENV?</p>\n"
+msgstr ""
+
+#: templates/index.html:83
+msgid "Terms of Use"
+msgstr ""
+
+#: templates/index.html:93 templates/vulnerability.html:145
 msgid ""
 "Quickly explore climate projections, impacts and vulnerability information "
 "for your area"
 msgstr ""
 
-#: templates/index.html:49 templates/index.html.py:54 templates/index.html:94
+#: templates/index.html:94 templates/index.html.py:99
 msgid "Learn more"
 msgstr ""
 
-#: templates/index.html:53
-msgid "Learn and explore options to adapt to climate change"
-msgstr ""
-
-#: templates/index.html:58
-msgid "Information, Articles and Links"
-msgstr ""
-
-#: templates/index.html:59
-msgid "View details"
-msgstr ""
-
-#: templates/index.html:65 templates/tools.html:66
-msgid "Tools and Maps"
-msgstr ""
-
-#: templates/index.html:66
+#: templates/index.html:105
 msgid ""
-"For citizens and decision makers to learn more about climate change and it's "
-"impacts."
+"For citizens and decision makers to learn more about climate change and it's"
+" impacts."
 msgstr ""
 
-#: templates/index.html:68
+#: templates/index.html:107
 msgid "Interactive maps"
 msgstr ""
 
-#: templates/index.html:69
+#: templates/index.html:108
 msgid "Simulations"
 msgstr ""
 
-#: templates/index.html:71
+#: templates/index.html:110
 msgid "View interactive simulations"
 msgstr ""
 
-#: templates/index.html:75 templates/search_base.html:63
-msgid "Raw Data"
+#: templates/index.html:119 templates/maps.html:17 templates/maps.html.py:30
+#: templates/tools.html:110
+msgid "Search"
 msgstr ""
 
-#: templates/index.html:76
+#: templates/index.html:121
 msgid ""
 "Find and download the raw data used in many of the country's research "
 "initiatives."
 msgstr ""
 
-#: templates/index.html:81 templates/maps.html:17 templates/maps.html.py:30
-#: templates/tools.html:86
-msgid "Search"
-msgstr ""
-
-#: templates/index.html:84
+#: templates/index.html:122
 msgid "View all layers"
-msgstr ""
-
-#: templates/index.html:90
-msgid "Who are we?"
-msgstr ""
-
-#: templates/index.html:91
-msgid "What do we do?"
-msgstr ""
-
-#: templates/index.html:92
-msgid "FAQ"
 msgstr ""
 
 #: templates/maps.html:4
 msgid "Browse Maps"
 msgstr ""
 
-#: templates/maps.html:30 templates/tools.html:86
+#: templates/maps.html:30 templates/tools.html:110
 msgid "for maps"
 msgstr ""
 
@@ -255,6 +267,10 @@ msgstr ""
 msgid "Create your own map"
 msgstr ""
 
+#: templates/resources.html:9
+msgid "Resources"
+msgstr ""
+
 #: templates/resources.html:11
 msgid "UNDP Mozambique in GripWeb"
 msgstr ""
@@ -275,6 +291,10 @@ msgstr ""
 msgid "Search Data"
 msgstr ""
 
+#: templates/search_base.html:63
+msgid "Raw Data"
+msgstr ""
+
 #: templates/search_base.html:64
 msgid "Search for geospatial data in raw formats."
 msgstr ""
@@ -285,90 +305,156 @@ msgid ""
 "KML, GeoTIFF, or SHP."
 msgstr ""
 
-#: templates/search_base.html:68 templates/tools.html:91
+#: templates/search_base.html:68 templates/tools.html:115
 msgid "To bookmark your current search use this"
 msgstr ""
 
-#: templates/search_base.html:68 templates/tools.html:91
+#: templates/search_base.html:68 templates/tools.html:115
 msgid "permalink"
 msgstr ""
 
-#: templates/search_base.html:75
-msgid "Refine Search"
+#: templates/search_base.html:75 templates/maps/layer_upload.html:15
+msgid "Add data"
 msgstr ""
 
 #: templates/search_base.html:77
+msgid "Refine Search"
+msgstr ""
+
+#: templates/search_base.html:79
 msgid "By area"
 msgstr ""
 
-#: templates/search_base.html:78
+#: templates/search_base.html:80
 msgid "Limit the search to data that includes features in the displayed area."
 msgstr ""
 
-#: templates/search_base.html:85
+#: templates/search_base.html:87
 msgid "Selected Data"
 msgstr ""
 
-#: templates/search_base.html:86
-msgid "Use the checkboxes in the search results to add data to your selection."
+#: templates/search_base.html:88
+msgid ""
+"Use the checkboxes in the search results to add data to your selection."
 msgstr ""
 
-#: templates/search_base.html:92 templates/profiles/profile_detail.html:17
+#: templates/search_base.html:94 templates/profiles/profile_detail.html:17
 msgid "Create a new map"
 msgstr ""
 
-#: templates/search_base.html:93 templates/search_base.html.py:96
+#: templates/search_base.html:95 templates/search_base.html.py:98
 msgid "Export selected"
 msgstr ""
 
+#: templates/terms.html:7
+msgid "Terms and Conditions of Use and Privacy policy"
+msgstr ""
+
 #: templates/tools.html:43
-msgid "Latest Maps"
-msgstr ""
-
-#: templates/tools.html:54
-msgid "No maps have been created."
-msgstr ""
-
-#: templates/tools.html:54
-msgid "Why not"
-msgstr ""
-
-#: templates/tools.html:54
-msgid "create one?"
-msgstr ""
-
-#: templates/tools.html:57
 msgid "Create your own"
 msgstr ""
 
-#: templates/tools.html:58
+#: templates/tools.html:45
+msgid "New map"
+msgstr ""
+
+#: templates/tools.html:48
+msgid "Latest Maps"
+msgstr ""
+
+#: templates/tools.html:59
+msgid "No maps have been created."
+msgstr ""
+
+#: templates/tools.html:59
+msgid "Why not"
+msgstr ""
+
+#: templates/tools.html:59
+msgid "create one?"
+msgstr ""
+
+#: templates/tools.html:67
+msgid "Tools and Maps"
+msgstr ""
+
+#: templates/tools.html:73
+msgid "Create your own interactive map"
+msgstr ""
+
+#: templates/tools.html:76
 msgid ""
 "You can use the interactive tools to create your own map focused on a topic "
 "or a location."
 msgstr ""
 
-#: templates/tools.html:59
-msgid "New map"
+#: templates/tools.html:80
+msgid "Zambezi Decision Support System for Climate Change"
 msgstr ""
 
-#: templates/tools.html:70
-msgid "Disaster Loss Database"
+#: templates/tools.html:82
+msgid ""
+"A web-based Decision Support System to analyze the impact of climate change "
+"and water resources development on runoff in the Zambezi basin."
 msgstr ""
 
-#: templates/tools.html:72
-msgid "Risk Calculator"
+#: templates/tools.html:87
+msgid "GRIPWeb Disaster Loss Database for Mozambique"
 msgstr ""
 
-#: templates/tools.html:90
+#: templates/tools.html:89
+msgid ""
+"GRIPWeb provides an innovative tool for information and knowledge "
+"management, it also aims at empowering people by introducing new ways of "
+"working and collaborating."
+msgstr ""
+
+#: templates/tools.html:93
+msgid "World Bank's Climate Change Knowledge Portal"
+msgstr ""
+
+#: templates/tools.html:96
+msgid ""
+"The Climate Change Knowledge Portal (CCKP) is a central hub of information, "
+"data and reports about climate change around the world. Here you can query, "
+"map, compare, chart and summarize key climate and climate-related "
+"information"
+msgstr ""
+
+#: templates/tools.html:114
 msgid "Click the <b>+</b> on any row to show map abstract."
 msgstr ""
 
-#: templates/vulnerability.html:12
+#: templates/vulnerability.html:39
 msgid "GFDRR Mozambique Country Profile"
 msgstr ""
 
-#: templates/vulnerability.html:21
-msgid "World Bank's Climate Change Knowledge Portal"
+#: templates/vulnerability.html:42
+msgid "At a glance"
+msgstr ""
+
+#: templates/vulnerability.html:44
+msgid ""
+"Floods are much more common in the Centre and South; tropical cyclones "
+"affect more of the Centre and South."
+msgstr ""
+
+#: templates/vulnerability.html:45
+msgid "Droughts occur more frequently in South and Centre of the country."
+msgstr ""
+
+#: templates/vulnerability.html:46
+msgid ""
+"While droughts are more common in the south, the magnitude of floods in this"
+" region can be very high and cause high damages."
+msgstr ""
+
+#: templates/vulnerability.html:47
+msgid "Tropical cyclones and epidemics are a concern in the Northern region."
+msgstr ""
+
+#: templates/vulnerability.html:144
+msgid "Impacts and Vulnerability"
 msgstr ""
 
 #: templates/avatar/add.html:6 templates/profiles/edit_profile.html:7
@@ -387,156 +473,160 @@ msgstr ""
 msgid "Risiko Calculator"
 msgstr ""
 
-#: templates/maps/layer.html:156
+#: templates/maps/layer.html:152
 msgid "No abstract for this layer."
 msgstr ""
 
-#: templates/maps/layer.html:162
+#: templates/maps/layer.html:158
 msgid "Information"
 msgstr ""
 
-#: templates/maps/layer.html:165
+#: templates/maps/layer.html:161
 msgid "Type"
 msgstr ""
 
-#: templates/maps/layer.html:166
+#: templates/maps/layer.html:162
 msgid "Keywords"
 msgstr ""
 
-#: templates/maps/layer.html:167
+#: templates/maps/layer.html:163
 msgid "Edition"
 msgstr ""
 
-#: templates/maps/layer.html:168
+#: templates/maps/layer.html:164
 msgid "Topic Category"
 msgstr ""
 
-#: templates/maps/layer.html:171
+#: templates/maps/layer.html:167
 msgid "Citation"
 msgstr ""
 
-#: templates/maps/layer.html:177
+#: templates/maps/layer.html:173
 msgid "Uploaded by"
 msgstr ""
 
-#: templates/maps/layer.html:184
+#: templates/maps/layer.html:180
 msgid "Point of Contact"
 msgstr ""
 
-#: templates/maps/layer.html:191
+#: templates/maps/layer.html:186
+msgid "Name"
+msgstr ""
+
+#: templates/maps/layer.html:187
 msgid "Email"
 msgstr ""
 
-#: templates/maps/layer.html:192
+#: templates/maps/layer.html:188
 msgid "Organization"
 msgstr ""
 
-#: templates/maps/layer.html:193
+#: templates/maps/layer.html:189
 msgid "Position"
 msgstr ""
 
-#: templates/maps/layer.html:194
+#: templates/maps/layer.html:190
 msgid "Voice"
 msgstr ""
 
-#: templates/maps/layer.html:195
+#: templates/maps/layer.html:191
 msgid "Fax"
 msgstr ""
 
-#: templates/maps/layer.html:196
+#: templates/maps/layer.html:192
 msgid "Delivery"
 msgstr ""
 
-#: templates/maps/layer.html:197
+#: templates/maps/layer.html:193
 msgid "Area"
 msgstr ""
 
-#: templates/maps/layer.html:198
+#: templates/maps/layer.html:194
 msgid "Zip Code"
 msgstr ""
 
-#: templates/maps/layer.html:199
+#: templates/maps/layer.html:195
 msgid "Country"
 msgstr ""
 
-#: templates/maps/layer.html:207
+#: templates/maps/layer.html:203
 msgid "Attributes"
 msgstr ""
 
-#: templates/maps/layer.html:213
+#: templates/maps/layer.html:209
 msgid "English Description"
 msgstr ""
 
-#: templates/maps/layer.html:219
+#: templates/maps/layer.html:215
 msgid "Data Quality Statement"
 msgstr ""
 
-#: templates/maps/layer.html:229
+#: templates/maps/layer.html:225
 msgid "Legend"
 msgstr ""
 
-#: templates/maps/layer.html:241
+#: templates/maps/layer.html:236 templates/maps/mapinfo.html:67
+msgid "Download"
+msgstr ""
+
+#: templates/maps/layer.html:237
 msgid ""
 "Below are links to download the raw data and metadata for this layer. The "
 "most used download format is colored in blue."
 msgstr ""
 
-#: templates/maps/layer.html:248
-msgid "Metadata"
-msgstr ""
-
-#: templates/maps/layer.html:253
+#: templates/maps/layer.html:247
 msgid "No metadata links provided for this data."
 msgstr ""
 
-#: templates/maps/layer.html:257
+#: templates/maps/layer.html:251
 msgid "Maps"
 msgstr ""
 
-#: templates/maps/layer.html:259
+#: templates/maps/layer.html:253
 msgid "The following maps use this data set"
 msgstr ""
 
-#: templates/maps/layer.html:266
+#: templates/maps/layer.html:260
 msgid "This layer is not currently used in any maps."
 msgstr ""
 
-#: templates/maps/layer.html:273
+#: templates/maps/layer.html:267
 msgid "Styles"
 msgstr ""
 
-#: templates/maps/layer.html:274
+#: templates/maps/layer.html:268
 msgid ""
 "The following styles are associated with this data set. Click on a style "
 "name to view or edit the style."
 msgstr ""
 
-#: templates/maps/layer.html:289
+#: templates/maps/layer.html:283
 msgid "Default style:"
 msgstr ""
 
-#: templates/maps/layer.html:308 templates/maps/mapinfo.html:75
+#: templates/maps/layer.html:302 templates/maps/mapinfo.html:78
 msgid "Manage"
 msgstr ""
 
-#: templates/maps/layer.html:311 templates/maps/mapinfo.html:82
+#: templates/maps/layer.html:305 templates/maps/mapinfo.html:85
 msgid "Edit metadata"
 msgstr ""
 
-#: templates/maps/layer.html:312
+#: templates/maps/layer.html:306
 msgid "Replace raw data"
 msgstr ""
 
-#: templates/maps/layer.html:315
+#: templates/maps/layer.html:309
 msgid "Edit Permissions"
 msgstr ""
 
-#: templates/maps/layer.html:318
+#: templates/maps/layer.html:312
 msgid "Delete this layer"
 msgstr ""
 
-#: templates/maps/layer.html:327 templates/maps/layer_upload.html:42
-#: templates/maps/mapinfo.html:94
+#: templates/maps/layer.html:321 templates/maps/layer_upload.html:42
+#: templates/maps/mapinfo.html:97
 msgid "Permissions"
 msgstr ""
 
@@ -561,11 +651,9 @@ msgstr ""
 #: templates/maps/layer_replace.html:43
 msgid ""
 "\n"
-"If the new dataset omits attributes that were included in the previous "
-"version,\n"
+"If the new dataset omits attributes that were included in the previous version,\n"
 "or changes their types, then existing styles for the layer may not work.\n"
-"Please check your maps if the new data includes such changes.  "
-"Additionally,\n"
+"Please check your maps if the new data includes such changes.  Additionally,\n"
 "updated data must be the same format as the data already in place, e.g.\n"
 msgstr ""
 
@@ -587,10 +675,6 @@ msgstr ""
 
 #: templates/maps/layer_upload.html:4
 msgid "Upload Layer"
-msgstr ""
-
-#: templates/maps/layer_upload.html:15
-msgid "Add data"
 msgstr ""
 
 #: templates/maps/layer_upload_step2.html:4
@@ -621,43 +705,43 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: templates/maps/mapinfo.html:54
+#: templates/maps/mapinfo.html:57
 msgid "Abstract:"
 msgstr ""
 
-#: templates/maps/mapinfo.html:58
+#: templates/maps/mapinfo.html:61
 msgid "Contact:"
 msgstr ""
 
-#: templates/maps/mapinfo.html:65
+#: templates/maps/mapinfo.html:68
 msgid "Download all layers included in this map"
 msgstr ""
 
-#: templates/maps/mapinfo.html:66
+#: templates/maps/mapinfo.html:69
 msgid "Layers"
 msgstr ""
 
-#: templates/maps/mapinfo.html:67
+#: templates/maps/mapinfo.html:70
 msgid "This map uses the following layers"
 msgstr ""
 
-#: templates/maps/mapinfo.html:80
+#: templates/maps/mapinfo.html:83
 msgid "View or edit this map"
 msgstr ""
 
-#: templates/maps/mapinfo.html:85
+#: templates/maps/mapinfo.html:88
 msgid "Edit permissions"
 msgstr ""
 
-#: templates/maps/mapinfo.html:88
+#: templates/maps/mapinfo.html:91
 msgid "Delete map"
 msgstr ""
 
-#: templates/maps/mapinfo.html:90
+#: templates/maps/mapinfo.html:93
 msgid "Duplicate map"
 msgstr ""
 
-#: templates/maps/mapinfo.html:95
+#: templates/maps/mapinfo.html:98
 msgid "Select what kind of privileges to allow."
 msgstr ""
 
